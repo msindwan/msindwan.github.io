@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Mayank Sindwani</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Welcome to my personal portfolio of various software development endeavours.">
+        <meta name="keywords" content="Software,Engineering,Portfolio,Mayank,Sindwani">
+        <meta name="author" content="Mayank Sindwani">
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+        <link href="css/ext/custom-scrollbar/jquery.mCustomScrollbar.min.css" rel="stylesheet" type="text/css">
+        <link href="css/ext/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="css/ext/bootstrap.min.css" rel="stylesheet">
+        <link href="css/design.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+         <div class="side-nav">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar_collapse" aria-expanded="false">
+                        <span class="sr-only"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="navbar-brand">
+                        <span class="first-name">Mayank</span>
+                        <span class="last-name">Sindwani</span>
+                    	<span class="sub-text">UI/UX Developer</span>
+                    </div>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar_collapse">
+                    <ul id="site_nav" class="nav navbar-nav">
+                        <li data-target="#home_carousel" class="active">
+                        	<a href="javascript:void(0)">Home</a>
+                        </li>
+                        <li data-target=".section.profile">
+                        	<a href="javascript:void(0)">Profile</a>
+                        </li>
+                        <li data-target=".section.projects">
+	                        <a href="javascript:void(0)">Projects</a>
+                        </li>
+                        <li data-target=".section.contact">
+                        	<a href="javascript:void(0)">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div id="content_scroll">
+        	<div class="loader">
+	        	<img id="spinner" src="images/spinner.gif"></img>
+				<h1>Loading...</h1>
+			</div>
+        	<header id="home_carousel" class="carousel slide">
+            	<ol class="carousel-indicators">
+                	<li data-target="#home_carousel" data-slide-to="0" class="active"></li>
+                	<li data-target="#home_carousel" data-slide-to="1"></li>
+            	</ol>
+            	<div class="carousel-inner">
+                	<div class="item landing active">
+                    	<div class="fill">
+          					<div class="container fill-container">
+            					<div class="row">
+              						<div class="transparent-black landing-blurb col-md-6">
+        								<h1>Hi There!</h1>
+        								<p>
+        									The following web page is a concise portfolio that includes all my work and a synopsis of my profile. I am a software engineering student and developer with over four years of experience in web design and application development.
+        								</p>
+    								</div>
+									<div class="transparent-black landing-quote col-md-6">
+										<div class="quote">
+											<i class="fa fa-quote-left"></i>
+												A user interface is like a joke. If you have to explain it, it's not that good.
+											<i class="fa fa-quote-right"></i>
+										</div>
+										- startupvitamins
+									</div>
+    							</div>
+  							</div>
+						</div>
+            		</div>
+            		<div class="item projects">
+                		<div class="fill">
+                			<div class="container fill-container">
+            					<div class="row">
+              						<div class="transparent-black col-md-6">
+        								<h1>Projects</h1>
+        								<p>
+        									See the compilation of projects that I've worked on recently. You can download the source code with the links provided or visit my bitbucket page. Please adhere to any license agreements before use.
+        								</p>
+    								</div>
+									<div class="col-md-6"></div>
+    							</div>
+    							<div class="row">
+    								<div class="col-md-6" style="padding: 0;">
+										<div id="view_projects" class="btn btn-custom btn-lg btn-block btn-biru">View Projects</div>
+									</div>
+									<div class="col-md-6"></div>
+    							</div>
+  							</div>
+                		</div>
+                	</div>
+            	</div>
+            	<a class="left carousel-control" href="#home_carousel" data-slide="prev">
+                	<span class="icon-prev"></span>
+            	</a>
+            	<a class="right carousel-control" href="#home_carousel" data-slide="next">
+                	<span class="icon-next"></span>
+            	</a>
+        	</header>
+        	<div class="content">
+        		<div class="section profile">
+        			<h1>Profile</h1>
+        			<h2 style="text-align:center;">Here's a little bit about myself.</h2>
+					<div class="row profile-block">
+						<div class="col-xs-4">
+							<div class="profile-education">
+								<i class="fa fa-university profile-icon"></i>
+  								<h2>Education</h2>
+  								<p>
+									I am a third-year student currently pursuing a bachelors degree in Software Engineering from the University of Waterloo. Courses that have furthered my development skills include Programming Principles, Data Structures, Algorithms, and User Interfaces.
+								</p>
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="profile-experience">
+								<i class="fa fa-desktop profile-icon"></i>
+								<h2>Experience</h2>
+								<p>I am profficient in CSS, Javascript, and HTML along with jQuery and Bootstrap. In addition, I am experienced with python used for integration tests as well as C/C++ for Windows and Linux application development. Lastly, I use Microsoft SQL for back-end work as well as Git or SVN for version control.</p>
+				              </div>
+						</div>
+						<div class="col-xs-4">
+							<div class="profile-interests">
+								<i class="fa fa-book profile-icon"></i>
+								<h2>Interests</h2>
+								<p>
+									I am primarily interested in front-end work, namely web and graphic user interface development. Like many other developers, however, I am also interested in broadening my horizons and experimenting with new fields of software development.
+								</p>
+							</div>
+						</div>
+					</div>
+        		</div>
+        		<div class="section projects">
+        			<h1>Projects</h1>
+        		</div>
+        		<div class="section contact">
+        			<div class="row">
+        				<div class="col-xs-12">
+                            <div class="contact-body text-center">
+                                <div class="row">
+                                    <div class="contact-body-container col-lg-10 col-lg-offset-1">
+                                        <h1>Contact Me</h1>
+                                        <h4 class="contact-header">
+                                            Thank you for visiting my site! Send me a message if you have any questions, comments, or concerns.
+                                        </h4>
+                                        <p>
+                                            <a href="mailto:msindwan@uwaterloo.ca" class="contact-info">
+                                                msindwan@uwaterloo.ca
+                                            </a>
+                                            <span class="contact-info">
+                                                226-338-0545
+                                            </span>
+                                        </p>
+                                        <ul class="list-inline banner-social">
+                                            <li>
+                                                <a href="https://ca.linkedin.com/pub/max-sindwani/5b/7b9/43a" target="_" class="contact-icon">
+                                                    <i class="fa fa-linkedin"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://bitbucket.org/msindwan/" target="_" class="contact-icon">
+                                                    <i class="fa fa-bitbucket"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+						</div>
+					</div>
+        		</div>
+        	</div>
+        	<footer id="footer">
+    			<p>© 2015 <span style="color:#61868A;">Mayank Sindwani.</span> All rights reserved.</p>
+			</footer>
+
+			<!-- templates -->
+			<template id="project_container">
+				<div class="row project-block">
+					<div class="col col-xs-6 col-1"></div>
+					<div class="col col-xs-6 col-2"></div>
+				</div>
+			</template>
+		</div>
+        <script type="text/javascript" src="js/ext/jquery.js"></script>
+        <script type="text/javascript" src="js/ext/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script type="text/javascript" src="js/ext/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript">
+                window.addEventListener("load", function(e) {
+                   Portfolio.UI().init();
+                });
+        </script>
+	</body>
+</html>
