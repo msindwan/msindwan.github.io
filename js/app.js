@@ -1,217 +1,161 @@
 /**
- * Portfolio Main Module
+ * Portfolio Javascript
  *
- * @Author : Mayank Sindwani
- * @Date   : 2015-09-23
- *
- * Description : A module that binds event handlers and houses helper methods
- * for user interaction with the portfolio.
- **/
+ * @author Mayank Sindwani
+ * @date 2016-03-13
+ */
 
-'use strict';
+ 'use strict';
 
-// Localize the namespace-like object.
-var Portfolio = Portfolio || {};
+// Checks for the preserve-3d attribute.
+function HasPreserve3D() {
+    var elem, hasProp;
 
-Portfolio.UI = function() {
+    // Insert a dummy element.
+    elem = document.createElement('div');
+    document.body.insertBefore(elem, null);
 
-    // Private variables
-    var data = {},
-        dom = {},
-        handlers = {},
-        methods = {},
-        setup = {},
-        projects;
-
-    // Projects Array.
-    projects = [{
-
-        name: "JConf",
-        description: '<a class="repo-link" target="_" href="https://bitbucket.org/msindwan/jconf">JConf</a> \
-                      is a JSON parser for C/C++ applications. It is primarily used for JSON-based configuration files.',
-
-        image : "images/jconf_logo.png",
-        link: "https://bitbucket.org/msindwan/jconf"
-
-    },
-    {
-
-        name: "Server++",
-        description: '<a class="repo-link" target="_" href="https://bitbucket.org/msindwan/serverpp">Server++</a> \
-                      is a basic HTTP server for Windows and Linux written in C++. \
-                      <strong>Please note that it is still under development.</strong>.',
-
-        image : "images/serverpp_logo.png",
-        link: "https://bitbucket.org/msindwan/serverpp"
-
-    }];
-
-    /**
-     * Setup[dom]
-     *
-     * Retrieves and caches dom elements
-     **/
-    setup.dom = function() {
-        dom.content = $("#content_scroll");
-        dom.menu = $("#site_nav > li");
-        dom.view_projects = $("#view_projects");
-        dom.profile_education = $(".profile-education");
-        dom.profile_experience = $(".profile-experience");
-        dom.profile_interests = $(".profile-interests");
-        dom.projects = $('.section.projects');
-        dom.project_tmpl = $('#project_container');
-    };
-
-    /**
-     * Setup[data]
-     *
-     * Declares and sets data variables used globally
-     **/
-    setup.data = function() {
-        data.last_selected_item = $(dom.menu[0]);
-        data.slide_interval = 10000;
+    // Add a `preserve-3d` property and check to see if it's applied to the element.
+    if (elem.style.transformStyle !== undefined) {
+        elem.style.transformStyle = "preserve-3d";
+        hasProp = window.getComputedStyle(elem).getPropertyValue("preserve-3d");
     }
 
-    /**
-     * Setup[bindings]
-     *
-     * Adds event listeners to cached dom objects
-     **/
-    setup.bindings = function() {
+    document.body.removeChild(elem);
+    return hasProp !== undefined && hasProp !== "none";
+}
 
-        dom.menu.click(handlers.menu_item_clicked);
+// Wires up the 3D carousel.
+function Move3dCarousel() {
+    var currdeg = 0, curIndex, carousel, indicators, prevIndicator, newIndicator;
+    var carousel = document.getElementById("technologies_carousel");
+    var indicators = document.querySelectorAll(".carousel-indicators li");
+    var i, x, y;
 
-        dom.view_projects.click(handlers.view_projects_clicked);
-    };
+    prevIndicator = indicators[0];
+    curIndex = 0;
 
-    /**
-     * Setup[plugins]
-     *
-     * Initializes various third-party plugins
-     **/
-    setup.plugins = function() {
+    var moveCarousel = function(newIndex, indicator) {
 
-        dom.content.mCustomScrollbar({
-            theme:"dark",
-            scrollInertia : 100,
-            scrollButtons: { enable: true },
-            callbacks : { whileScrolling : handlers.on_scroll }
-        });
-
-        $('.carousel').carousel({
-            interval: data.slide_interval
-        });
-    };
-
-    /**
-     * Setup[init]
-     *
-     * Initializes the application. This is the entry point that is
-     * exposed globally
-     **/
-    setup.init = function() {
-        setup.dom();
-        setup.bindings();
-        setup.data();
-        setup.plugins();
-
-        methods.app_init();
-
-        // Initialize once
-        delete setup.init;
-    };
-
-    /* App Handlers */
-
-    handlers.menu_item_clicked = function(e) {
-        var li = $(this),
-            section = this.getAttribute("data-target");
-
-        if(!data.init)
+        if (newIndex === curIndex)
             return;
 
-        $(dom.content).mCustomScrollbar("scrollTo", $(section), {
-            scrollInertia:1000,
-            scrollEasing:"easeOut",
-            callbacks:false
-        });
+        var newIndicator;
 
-        if (data.last_selected_item.attr("data-target") != section)
-            methods.show_profile();
-
-        data.last_selected_item.removeClass("active");
-        data.last_selected_item = li;
-        li.addClass("active");
-    };
-
-    handlers.on_scroll = function(e) {
-        var min,
-            name,
-            section;
-
-        $.each(dom.menu, function(index, li) {
-            var target = li.getAttribute("data-target"),
-                top = Math.abs($(target).offset().top);
-
-            if (index === 0 || top < min) {
-                min = top;
-                section = li;
-                name = target;
-            }
-        });
-
-        data.last_selected_item.removeClass("active");
-        data.last_selected_item = $(section);
-        $(section).addClass("active");
-
-        if (name === '.section.profile') {
-            methods.show_profile();
+        if (newIndex === undefined) {
+            currdeg += 60;
+            curIndex = (curIndex + 1) % 6;
+        } else {
+            currdeg += (newIndex - curIndex) * 60;
+            curIndex = newIndex;
         }
-    };
 
-    handlers.view_projects_clicked = function(e) {
-        $("li[data-target='.section.projects']").click();
-    };
+        newIndicator = indicators[curIndex];
+        newIndicator.className = "active";
+        prevIndicator.className = "";
 
-    methods.app_init = function () {
+        prevIndicator = newIndicator;
 
-        projects.forEach(function(project) {
-            var clone = $(dom.project_tmpl.get(0).innerHTML),
-                columns = clone.find('.col');
-
-            $(columns[0])
-                .append($('<a></a>')
-                    .attr({
-                        'href': project.link,
-                        'target': '_'
-                    }).append(
-                        $('<div></div>')
-                            .attr('class', 'project-icon')
-                            .css('background-image', 'url(\'' + project.image + '\')')
-                     ).append(
-                        $('<h1 class="project-title">' + project.name + '</h1>')
-                     ));
-
-            $(columns[1])
-                .html(project.description);
-
-            dom.projects.append(clone);
-        });
+        var transform = 'rotateY(' + currdeg + 'deg)';
+        carousel.style.webkitTransform = transform;
+        carousel.style.mozTransform = transform;
+        carousel.style.msTransform = transform;
+        carousel.style.oTransform = transform;
+        carousel.style.transform = transform;
 
         setTimeout(function() {
-            $(".loader").hide();
-            $("#home_carousel").css("opacity","1");
-            setTimeout(function(){data.init = true;}, 500);
-        }, 100);
+
+            if (currdeg >= 360) {
+                carousel.style.transition = "none";
+
+                currdeg = 0;
+                var transform = 'rotateY(' + currdeg + 'deg)';
+                carousel.style.webkitTransform = transform;
+                carousel.style.mozTransform = transform;
+                carousel.style.msTransform = transform;
+                carousel.style.oTransform = transform;
+                carousel.style.transform = transform;
+
+                setTimeout(function() {
+                    carousel.style.transition = "transform 1s";
+                }, 50);
+            }
+
+        }, 1000);
     };
 
-    methods.show_profile = function() {
-        setTimeout(function() { dom.profile_education.addClass("slide-top"); }, 0);
-        setTimeout(function() { dom.profile_experience.addClass("slide-top");}, 200);
-        setTimeout(function() { dom.profile_interests.addClass("slide-top");} , 400);
-    };
+    for (i = 0; i < indicators.length; i++) {
+        indicators[i].addEventListener("click", function(e) {
+            clearInterval(x);
+            clearTimeout(y);
 
-    return {
-        init : setup.init
+            moveCarousel(parseInt(e.target.getAttribute("data-index")), indicators[i]);
+            y = setTimeout(function() {
+                x = setInterval(moveCarousel, 1500);
+            }, 2000);
+        });
     }
-};
+
+    x = setInterval(moveCarousel, 1500);
+}
+
+// Wires up the 2D carousel.
+function Move2dCarousel() {
+    var carousel = document.getElementById("technologies_carousel"),
+        indicators = document.querySelectorAll(".carousel-indicators li"),
+        panelSize = 404,
+        index = 0,
+        i, x, y;
+
+    var moveCarousel = function(newIndex) {
+
+
+        indicators[index].className = "";
+
+        if (newIndex === undefined) {
+            index = (index + 1) % 6;
+        } else {
+            index = newIndex;
+        }
+
+        carousel.style.marginLeft = -1 * (panelSize*index) + "px";
+        indicators[index].className = "active";
+    }
+
+    indicators[index].className = "active";
+    x = setInterval(moveCarousel, 2000);
+
+    for (i = 0; i < indicators.length; i++) {
+        indicators[i].addEventListener("click", function(e) {
+            clearInterval(x);
+            clearTimeout(y);
+
+            moveCarousel(parseInt(e.target.getAttribute("data-index")), indicators[i]);
+            y = setTimeout(function() {
+                x = setInterval(moveCarousel, 2000);
+            }, 2500);
+        });
+    }
+}
+
+// Entry point.
+function Main() {
+    var show3dCarousel;
+    show3dCarousel = HasPreserve3D();
+
+    // Show a 3D carousel if supported.
+    if (show3dCarousel) {
+        document.getElementById("technologies_carousel_container").className += " three-dimensional-carousel";
+    }
+
+    // Enable the carousel.
+    window.addEventListener("load", function() {
+        if (show3dCarousel) {
+            Move3dCarousel();
+        } else {
+            Move2dCarousel();
+        }
+    });
+}
+
+Main();
