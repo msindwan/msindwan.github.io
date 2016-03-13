@@ -418,4 +418,12 @@ a:hover {
     .email-text {
         display: none;
     }
+
+    .container {
+        padding: 0;
+    }
+
+    .section.about .content-container {
+        padding: 40px 0px;
+    }
 }
