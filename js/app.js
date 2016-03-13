@@ -92,7 +92,7 @@ function Move3dCarousel() {
 function Move2dCarousel() {
     var carousel = document.getElementById("technologies_carousel"),
         indicators = document.querySelectorAll(".carousel-indicators li"),
-        panelSize = 404,
+        panelSize = 215,
         index = 0,
         i, x, y;
 
@@ -107,7 +107,7 @@ function Move2dCarousel() {
             index = newIndex;
         }
 
-        carousel.style.marginLeft = -1 * (panelSize*index) + "px";
+        carousel.style.marginTop = -1 * (panelSize*index) + "px";
         indicators[index].className = "active";
     }
 

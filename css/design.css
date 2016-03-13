@@ -177,7 +177,6 @@ a:hover {
 }
 
 .carousel-container .carousel {
-    width: 8000px;
     transition: margin 1s;
 }
 
@@ -186,8 +185,8 @@ a:hover {
 }
 
 .carousel-container .carousel .carousel-item {
-    display: inline-block;
-    width: 400px;
+    display: block;
+    width: 100%;
     height: 215px;
     font-size: 5em;
     text-align: center;
@@ -385,6 +384,14 @@ a:hover {
         text-align: center;
         display: block;
         margin: auto;
+    }
+
+}
+
+@media(max-width: 479px) {
+
+    #technologies_carousel_container {
+        width: auto;
     }
 
 }
