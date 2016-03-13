@@ -7,23 +7,6 @@
 
  'use strict';
 
-// Checks for the preserve-3d attribute.
-function HasPreserve3D() {
-    var elem, hasProp;
-
-    // Insert a dummy element.
-    elem = document.createElement('div');
-    document.body.insertBefore(elem, null);
-
-    // Add a `preserve-3d` property and check to see if it's applied to the element.
-    if (elem.style.transformStyle !== undefined) {
-        elem.style.transformStyle = "preserve-3d";
-        hasProp = window.getComputedStyle(elem).getPropertyValue("preserve-3d");
-    }
-
-    document.body.removeChild(elem);
-    return hasProp !== undefined && hasProp !== "none";
-}
 
 // Wires up the 3D carousel.
 function Move3dCarousel() {
@@ -140,17 +123,14 @@ function Move2dCarousel() {
 
 // Entry point.
 function Main() {
-    var show3dCarousel;
-    show3dCarousel = HasPreserve3D();
-
     // Show a 3D carousel if supported.
-    if (show3dCarousel) {
+    if (Modernizr.preserve3d) {
         document.getElementById("technologies_carousel_container").className += " three-dimensional-carousel";
     }
 
     // Enable the carousel.
     window.addEventListener("load", function() {
-        if (show3dCarousel) {
+        if (Modernizr.preserve3d) {
             Move3dCarousel();
         } else {
             Move2dCarousel();
