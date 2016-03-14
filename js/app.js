@@ -112,9 +112,7 @@ function Move2dCarousel() {
             return;
         }
 
-        prevIndicator = indicators[curIndex];
         prevIndicator.className = "";
-
         if (newIndex === undefined) {
             curIndex = (curIndex + 1) % 6;
         } else {
@@ -123,6 +121,7 @@ function Move2dCarousel() {
 
         // Move the carousel.
         carousel.style.marginTop = -1 * (panelHeight * curIndex) + "px";
+        prevIndicator = indicators[curIndex];
         prevIndicator.className = "active";
     }
 
