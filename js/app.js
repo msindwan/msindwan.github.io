@@ -16,119 +16,135 @@ function IsMobile() {
 
 // Wires up the 3D carousel.
 function Move3dCarousel() {
-    var currdeg = 0, curIndex, carousel, indicators, prevIndicator, newIndicator;
-    var carousel = document.getElementById("technologies_carousel");
-    var indicators = document.querySelectorAll(".carousel-indicators li");
-    var i, x, y;
+    var indicators    = document.querySelectorAll(".carousel-indicators li"),
+        carousel      = document.getElementById("technologies_carousel"),
+        prevIndicator = indicators[0],
+        newIndicator  = null,
+        automaticSpin = null,
+        spinTimeout   = null,
+        spinDelay     = 2000,
+        rotationDelay = 1000,
+        numPanels     = 6,
+        curIndex      = 0,
+        currdeg       = 0;
 
-    prevIndicator = indicators[0];
-    curIndex = 0;
-
-    var moveCarousel = function(newIndex, indicator) {
-
-        if (newIndex === curIndex)
-            return;
-
-        var newIndicator;
-
-        if (newIndex === undefined) {
-            currdeg += 60;
-            curIndex = (curIndex + 1) % 6;
-        } else {
-            currdeg += (newIndex - curIndex) * 60;
-            curIndex = newIndex;
-        }
-
-        newIndicator = indicators[curIndex];
-        newIndicator.className = "active";
-        prevIndicator.className = "";
-
-        prevIndicator = newIndicator;
-
+    // Turns the carousel.
+    var turnCarousel = function() {
         var transform = 'rotateY(' + currdeg + 'deg)';
         carousel.style.webkitTransform = transform;
         carousel.style.mozTransform = transform;
         carousel.style.msTransform = transform;
         carousel.style.oTransform = transform;
         carousel.style.transform = transform;
+    }
+
+    // Sets the transition properties of the carousel.
+    var setCarouselTransition = function(transition) {
+        carousel.style.webkitTransition = transition;
+        carousel.style.mozTransition = transition;
+        carousel.style.msTransition = transition;
+        carousel.style.oTransition = transition;
+        carousel.style.transition = transition;
+    }
+
+    // Moves the carousel to the newIndex or to the next item if an index is not provided.
+    var moveCarousel = function(newIndex) {
+        if (newIndex === curIndex) {
+            return;
+        }
+
+        // Calculate the new rotation degree.
+        if (newIndex === undefined) {
+            currdeg += (360 / numPanels);
+            curIndex = (curIndex + 1) % numPanels;
+        } else {
+            currdeg += (newIndex - curIndex) * (360 / numPanels);
+            curIndex = newIndex;
+        }
+
+        turnCarousel();
+
+        // Update the indicators.
+        prevIndicator.className = "";
+        prevIndicator = indicators[curIndex];
+        prevIndicator.className = "active";
 
         setTimeout(function() {
-
             if (currdeg >= 360) {
-                carousel.style.transition = "none";
-
+                setCarouselTransition("none");
                 currdeg = 0;
-                var transform = 'rotateY(' + currdeg + 'deg)';
-                carousel.style.webkitTransform = transform;
-                carousel.style.mozTransform = transform;
-                carousel.style.msTransform = transform;
-                carousel.style.oTransform = transform;
-                carousel.style.transform = transform;
-
-                setTimeout(function() {
-                    carousel.style.transition = "transform 1s";
-                }, 50);
+                turnCarousel();
+                setTimeout(function() { setCarouselTransition("transform 1s"); }, 50);
             }
-
-        }, 1000);
+        }, rotationDelay);
     };
 
-    for (i = 0; i < indicators.length; i++) {
+    // Map indicators to the carousel move function.
+    for (var i = 0; i < indicators.length; i++) {
         indicators[i].addEventListener("click", function(e) {
-            clearInterval(x);
-            clearTimeout(y);
+
+            clearInterval(automaticSpin);
+            clearTimeout(spinTimeout);
 
             moveCarousel(parseInt(e.target.getAttribute("data-index")), indicators[i]);
-            y = setTimeout(function() {
-                x = setInterval(moveCarousel, 1500);
-            }, 2000);
+            spinTimeout = setTimeout(function() { automaticSpin = setInterval(moveCarousel, spinDelay); }, spinDelay);
         });
     }
 
-    x = setInterval(moveCarousel, 1500);
+    automaticSpin = setInterval(moveCarousel, spinDelay);
 }
 
 // Wires up the 2D carousel.
 function Move2dCarousel() {
-    var carousel = document.getElementById("technologies_carousel"),
-        indicators = document.querySelectorAll(".carousel-indicators li"),
-        panelSize = 215,
-        index = 0,
-        i, x, y;
+    var panelHeight   = document.querySelector('.carousel .panel-six').clientHeight,
+        indicators    = document.querySelectorAll(".carousel-indicators li"),
+        carousel      = document.getElementById("technologies_carousel"),
+        prevIndicator = indicators[0],
+        automaticSpin = null,
+        spinTimeout   = null,
+        spinDelay     = 2000,
+        curIndex      = 0,
+        index         = 0;
 
+    // Moves the carousel to the newIndex or to the next item if an index is not provided.
     var moveCarousel = function(newIndex) {
-
-
-        indicators[index].className = "";
-
-        if (newIndex === undefined) {
-            index = (index + 1) % 6;
-        } else {
-            index = newIndex;
+        if (newIndex === curIndex) {
+            return;
         }
 
-        carousel.style.marginTop = -1 * (panelSize*index) + "px";
-        indicators[index].className = "active";
+        prevIndicator = indicators[curIndex];
+        prevIndicator.className = "";
+
+        if (newIndex === undefined) {
+            curIndex = (curIndex + 1) % 6;
+        } else {
+            curIndex = newIndex;
+        }
+
+        // Move the carousel.
+        carousel.style.marginTop = -1 * (panelHeight * curIndex) + "px";
+        prevIndicator.className = "active";
     }
 
-    indicators[index].className = "active";
-    x = setInterval(moveCarousel, 2000);
+    prevIndicator.className = "active";
 
-    for (i = 0; i < indicators.length; i++) {
+    // Map indicators to the carousel move function.
+    for (var i = 0; i < indicators.length; i++) {
         indicators[i].addEventListener("click", function(e) {
-            clearInterval(x);
-            clearTimeout(y);
+
+            clearInterval(automaticSpin);
+            clearTimeout(spinTimeout);
 
             moveCarousel(parseInt(e.target.getAttribute("data-index")), indicators[i]);
-            y = setTimeout(function() {
-                x = setInterval(moveCarousel, 2000);
-            }, 2500);
+            spinTimeout = setTimeout(function() { automaticSpin = setInterval(moveCarousel, spinDelay); }, spinDelay);
         });
     }
+
+    automaticSpin = setInterval(moveCarousel, spinDelay);
 }
 
 // Entry point.
-function Main() {
+(function() {
     // Show a 3D carousel if supported.
     if (Modernizr.preserve3d && !IsMobile()) {
         document.getElementById("technologies_carousel_container").className += " three-dimensional-carousel";
@@ -142,6 +158,4 @@ function Main() {
             Move2dCarousel();
         }
     });
-}
-
-Main();
+})();
