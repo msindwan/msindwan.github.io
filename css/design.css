@@ -36,6 +36,20 @@ a:hover {
     color: #459E82 !important;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+    float: right;
+    color: white;
+}
+
+ul li {
+    list-style: none;
+    float: left;
+    padding: 5px 10px;
+    font-size: 20px;
+}
+
 /* Cascading bootstrap styles */
 
 .well {
@@ -66,20 +80,6 @@ a:hover {
     padding: 0;
     margin: 0;
     width: 100%;
-}
-
-.navbar ul {
-    margin: 0;
-    padding: 0;
-    float: right;
-    color: white;
-}
-
-.navbar ul li {
-    list-style: none;
-    float: left;
-    padding: 5px 10px;
-    font-size: 20px;
 }
 
 .navbar .content-title {
@@ -378,12 +378,18 @@ a:hover {
     font-weight: 100;
     color: white;
     padding-top: 10px;
+    display: inline-block;
 }
 
 .footer-nav .footer-text {
     color: #42807B;
     padding-top: 10px;
     font-weight: bolder;
+}
+
+.footer-nav ul li {
+    font-size: 12px;
+    margin-top: 5px;
 }
 
 /* Responsive Designs */
