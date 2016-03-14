@@ -429,6 +429,14 @@ ul li {
         text-align: center;
     }
 
+    .footer-nav ul {
+        float: none;
+    }
+
+    .footer-nav ul li {
+        float: none;
+    }
+
     .section.projects .well {
         height: 200px;
     }
