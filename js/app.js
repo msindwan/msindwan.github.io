@@ -144,10 +144,20 @@ function Move2dCarousel() {
 
 // Entry point.
 (function() {
+    // Dynamically set link content.
+    var linkcontent = document.createElement("a"),
+        username = "mayanksindwani",
+        hostname = "live.ca";
+
     // Show a 3D carousel if supported.
     if (Modernizr.preserve3d && !IsMobile()) {
         document.getElementById("technologies_carousel_container").className += " three-dimensional-carousel";
     }
+
+    // Append link.
+    linkcontent.setAttribute('href', "mail" + "to:" + username + "@" + hostname);
+    linkcontent.textContent = username + "@" + hostname;
+    document.getElementById("cinfo").appendChild(linkcontent);
 
     // Enable the carousel.
     window.addEventListener("load", function() {
