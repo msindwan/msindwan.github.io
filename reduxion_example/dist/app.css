@@ -1,0 +1,78 @@
+/**
+ * Reduxion SASS
+ *
+ * @Author : Mayank Sindwani
+ * @Date   : 2016-12-22
+ *
+ * Description: App stylesheet.
+ **/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300");
+html {
+  background: #fbfbfb;
+  font-family: 'Open Sans'; }
+
+form {
+  padding: 10px; }
+
+input {
+  width: 100%;
+  display: inline-block;
+  border: 1px solid #e2e1e1;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: 14px;
+  font-family: inherit;
+  margin-bottom: 10px; }
+
+.logo {
+  width: 80px;
+  background: white;
+  border-radius: 50%;
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.notification-container {
+  width: 350px;
+  position: absolute;
+  top: 10px;
+  padding-left: 15px; }
+  .notification-container .notification {
+    width: 100%;
+    background: #ececec;
+    border-radius: 2px;
+    margin-top: 5px;
+    line-height: 15px;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 20px;
+    font-weight: 800; }
+
+.sign-in-header {
+  text-align: center;
+  margin-bottom: 4px; }
+
+.sign-in-container {
+  margin: auto;
+  display: table;
+  width: 500px; }
+
+.btn {
+  padding: 8px;
+  text-align: center;
+  border-radius: 2px; }
+  .btn.btn-primary {
+    background: #e88d8d;
+    color: white;
+    width: 100%;
+    border: 0;
+    font-size: 16px;
+    font-family: inherit; }
+    .btn.btn-primary:disabled {
+      background: #f0b6b6; }
