@@ -456,3 +456,8 @@ ul li {
     background: #964545;
     font-style: italic;
 }
+
+.status-tag.beta {
+    background: #9c702e;
+    font-style: italic;
+}
