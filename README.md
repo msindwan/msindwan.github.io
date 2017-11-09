@@ -2,7 +2,7 @@
 
 Welcome to my personal [portfolio](http://msindwan.github.io)!
 
-# Supported Browsers
+# Browser Support
 
 Supported browsers include:
 
