@@ -51,7 +51,8 @@ gulp.task('js', 'Builds the javascript files.', () => {
 
     const bundle = function (files) {
 
-        plugins.util.log("Starting '" + plugins.util.colors.cyan('browserify') + "' " + plugins.util.colors.magenta((files ? ' => ' + files : '')));
+        plugins.util.log("Starting '" + plugins.util.colors.cyan('browserify') + "' "
+            + plugins.util.colors.magenta((files ? ' => ' + files : '')));
 
         return b.bundle()
             .on('error', function (err) {
