@@ -6,37 +6,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Max Sindwani</title>
-        <link rel="icon" type="image/png" href="images/favicon.ico">
-        <link rel="stylesheet" href="ext/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="ext/bootstrap/bootstrap.min.css">
-        <link rel="stylesheet" href="css/design.css">
+        <link rel="icon" type="image/png" href="static/images/favicon.ico">
+        <link rel="stylesheet" href="static/ext/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="static/ext/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="static/css/design.css">
     </head>
     <body>
         <div class="navbar">
             <div class="sub-navbar">
                 <div class="container">
                     <div class="contact">
-                        <span><i class="fa fa-envelope"></i>
                         <span id="cinfo"></span>
                     </div>
                     <ul>
                         <li>
-                            <a title="Resume" target="_blank" href="resources/Mayank_Sindwani_Resume_2017.pdf">
+                            <a title="Resume" href="static/mayank_sindwani_resume.pdf">
                                 <i class="fa fa-file-text"></i>
                             </a>
                         </li>
                         <li>
-                            <a title="BitBucket" target="_blank" href="https://bitbucket.org/msindwan">
-                                <i class="fa fa-bitbucket"></i>
+                            <a title="GitHub" href="https://github.com/msindwan">
+                                <i class="fa fa-github"></i>
                             </a>
                         </li>
                         <li>
-                            <a title="Stack Overflow" target="_blank" href="http://stackoverflow.com/users/7376337/max-sindwani">
+                            <a title="Stack Overflow" href="http://stackoverflow.com/users/7376337/max-sindwani">
                                 <i class="fa fa-stack-overflow"></i>
                             </a>
                         </li>
                         <li>
-                            <a title="LinkedIn" target="_blank" href="https://ca.linkedin.com/in/max-sindwani-43a7b95b">
+                            <a title="LinkedIn" href="https://ca.linkedin.com/in/max-sindwani-43a7b95b">
                                 <i class="fa fa-linkedin"></i>
                             </a>
                         </li>
@@ -57,7 +56,8 @@
                         <div class="text">
                             <h1>About Me</h1>
                             <p>
-                                I am a software engineer with over four years of web and application development experience.
+                                I am a software engineer with over four years of web and application development
+                                experience.
                             </p>
                         </div>
                     </div>
@@ -94,54 +94,72 @@
         <div class="section projects">
             <div class="container content-container">
                 <h1>Projects</h1>
+                <div class="col col-xs-12 col-md-7">
+                    <a href="https://github.com/msindwan/sherlock">
+                        <div class="well sherlock">
+                            <h1 class="title">SHERLOCK</h1>
+                            <div class="description">
+                                 Inspired by Opengrok, Sherlock is a Java application that provides a web interface and
+                                 an automatic indexer to search files over a network. Sherlock is agnositic to source
+                                 control and directory structure.
+                            </div>
+                            <div class="status-tag released">
+                                Released v1.0.0
+                            </div>
+                        </div>
+                    </a>
+                </div>
                 <div class="col col-xs-12 col-md-5">
-                    <a href="https://bitbucket.org/msindwan/handbook" target="_blank">
+                    <a href="https://github.com/msindwan/handbook">
                         <div class="well reduxion">
                             <h1 class="title">HANDBOOK</h1>
                             <div class="description">
-                                Handbook is a simple android application for saving and viewing tutorials on your mobile device.
+                                Handbook is a simple android application for saving and viewing tutorials on your mobile
+                                device.
                             </div>
                             <div class="status-tag released">
                                 Released v1.0.0
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col col-xs-12 col-md-7">
-                    <a href="https://www.npmjs.com/package/reduxion" target="_blank">
-                        <div class="well reduxion">
-                            <h1 class="title">REDUXION</h1>
-                            <div class="description">
-                                Reduxion is another take on Redux that includes additional ES6 functionality and flux design patterns including a global
-                                dispatcher and class inheritence.
-                            </div>
-                            <div class="status-tag released">
-                                Released v1.0.0
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col col-xs-12 col-md-7">
-                    <a href="https://chrome.google.com/webstore/detail/mycache/cfgbkangadnolaljljeofhegbkjedpmf?hl=en-US&gl=US" target="_blank">
-                        <div class="well mycache">
-                            <h1 class="title">MYCACHE</h1>
-                            <div class="description">
-                                MyCache is a Chrome extension that automatically saves pages for offline viewing. It provides a user interface for browsing
-                                pages as well as defining rules on what pages to cache.
-                            </div>
-                            <div class="status-tag released">
-                                Released v1.0
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="col col-xs-12 col-md-5">
-                    <a href="https://www.npmjs.com/package/mhtml2html" target="_blank">
+                    <a href="https://www.npmjs.com/package/reduxion">
+                        <div class="well reduxion">
+                            <h1 class="title">REDUXION</h1>
+                            <div class="description">
+                                Reduxion is another take on Redux that incorporates additional ES6 functionality and
+                                flux design patterns including a global dispatcher and class inheritence.
+                            </div>
+                            <div class="status-tag released">
+                                Released v1.0.0
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col col-xs-12 col-md-7">
+                    <a href="https://chrome.google.com/webstore/detail/mycache/cfgbkangadnolaljljeofhegbkjedpmf">
+                        <div class="well mycache">
+                            <h1 class="title">MYCACHE</h1>
+                            <div class="description">
+                                MyCache is a Chrome extension that automatically saves pages for offline viewing. It
+                                provides a user interface for browsing pages as well as defining rules on what pages to
+                                cache.
+                            </div>
+                            <div class="status-tag released">
+                                Released v1.0.3
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col col-xs-12 col-md-7">
+                    <a href="https://www.npmjs.com/package/mhtml2html">
                         <div class="well mhtml2html">
                             <h1 class="title">MHTML2HTML</h1>
                             <div class="description">
-                                Mhtml2html is a simple npm package that converts MHTML files to single-page HTML files. It includes a command line interface
-                                for handling files as well as a script for in-browser conversions.
+                                Mhtml2html is an npm package that converts MHTML files to single-page HTML files. It
+                                includes a command line interface for handling files as well as a script for in-browser
+                                conversions.
                             </div>
                             <div class="status-tag released">
                                 Released v1.0.3
@@ -150,11 +168,12 @@
                     </a>
                 </div>
                 <div class="col col-xs-12 col-md-5">
-                    <a href="http://msindwan.bitbucket.io/chordgen" target="_blank">
+                    <a href="chordgen">
                         <div class="well chordgen">
                             <h1 class="title">CHORDGEN</h1>
                             <div class="description">
-                                Chordgen is a simple tool that generates Chord distributed hash table graphs for small values of m.
+                                Chordgen is a website that generates Chord distributed hash table graphs for small
+                                values of m.
                             </div>
                             <div class="status-tag released">
                                 Released v1.0.0
@@ -162,12 +181,13 @@
                         </div>
                     </a>
                 </div>
-                <div class="col col-xs-12 col-md-7">
-                    <a href="https://bitbucket.org/msindwan/serverpp" target="_blank">
+                <div class="col col-xs-12 col-md-5">
+                    <a href="https://github.com/msindwan/serverpp">
                         <div class="well serverpp">
                             <h1 class="title">SERVER++</h1>
                             <div class="description">
-                                Server++ is a basic HTTP server for Windows and Linux written in C++. Please note that it is still under development.
+                                Server++ is a basic HTTP server for Windows and Linux written in C++. Please note that
+                                it is still under development.
                             </div>
                             <div class="status-tag in-progress">
                                 In Progress
@@ -176,12 +196,13 @@
                     </a>
                 </div>
                 <div class="col col-xs-12 col-md-7">
-                    <a target="_blank" href="https://bitbucket.org/msindwan/jconf">
+                    <a href="https://github.com/msindwan/jconf">
                         <div class="well jconf">
                             <h1 class="title">JCONF</h1>
                             <div class="description">
-                                JCONF is a JSON parser for C/C++ applications intended for JSON-based configuration files. JCONF exposes an easy-to-use
-                                api that allows users to access object elements quickly.
+                                JCONF is a JSON parser for C/C++ applications intended for JSON-based configuration
+                                files. JCONF exposes an easy-to-use api that allows users to access object elements
+                                quickly.
                             </div>
                             <div class="status-tag released">
                                 Released v1.0.0
@@ -197,15 +218,22 @@
                            Created and Maintained by <span class="footer-text">Mayank (Max) Sindwani.</span>
                         </p>
                         <ul>
-                            <li><a href="https://bitbucket.org/msindwan/msindwan.bitbucket.org/wiki/Home">Wiki</a></li>
-                            <li><a href="https://bitbucket.org/msindwan/msindwan.bitbucket.org/wiki/Browser%20Support">Browser Support</a></li>
-                            <li><a href="https://bitbucket.org/msindwan/msindwan.bitbucket.org/wiki/Legal">Legal</a></li>
+                            <li>
+                                <a href="https://github.com/msindwan/msindwan.github.io#supported-browsers">
+                                    Browser Support
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/msindwan/msindwan.github.io#legal">
+                                    Legal
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </footer>
         </div>
-        <script type="text/javascript" src="js/modernizr.js"></script>
-        <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="static/js/modernizr.js"></script>
+        <script type="text/javascript" src="static/js/app.js"></script>
     </body>
 </html>
