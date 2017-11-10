@@ -26,8 +26,9 @@ This website makes use of the following libraries and frameworks:
 
 ### Logos
 
-Third-party software logos including Python, Android, React, Flux, HTML5, and NodeJS express the author's usage of the
-technology with respect to his experience and not for any claim on attribution or ownership.
+Third-party software logos including Python, Android, React, Flux, HTML5, and NodeJS are included in the website to
+convey the author's technical expertise with the aforementioned technologies and do not assert a claim on ownership or
+contribution.
 
 * [Python](https://www.python.org/community/logos/)
 * [Android](https://developer.android.com/distribute/marketing-tools/brand-guidelines.html#brand-android)
