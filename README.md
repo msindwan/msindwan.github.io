@@ -11,11 +11,11 @@ Supported browsers include:
 * Firefox
 * I.E 10+
 
-The website is viewed optimally with Chrome, Firefox, or Safari
+This website is viewed optimally with Chrome, Firefox, and Safari.
 
 # Legal
 
-The website makes use of the following libraries and frameworks:
+This website makes use of the following libraries and frameworks:
 
 * Bootstrap
     * License: MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)

@@ -226,7 +226,7 @@ ul li {
 }
 
 .carousel-container .carousel .panel-one {
-    background: url('../images/html5.png') no-repeat;
+    background: url('../images/HTML5_Badge.svg') no-repeat;
     background-size: 130px;
 }
 
@@ -236,8 +236,8 @@ ul li {
 }
 
 .carousel-container .carousel .panel-three {
-    background: url('../images/python.png') no-repeat;
-    background-size: 125px;
+    background: url('../images/python-logo-generic.svg') no-repeat;
+    background-size: 180px;
 }
 
 .carousel-container .carousel .panel-four {
@@ -246,7 +246,7 @@ ul li {
 }
 
 .carousel-container .carousel .panel-five {
-    background: url('../images/android.png') no-repeat;
+    background: url('../images/Android_Robot_200.png') no-repeat;
     background-size: 115px;
 }
 
