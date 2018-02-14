@@ -470,3 +470,7 @@ ul li {
     background: #9c702e;
     font-style: italic;
 }
+
+.tags {
+    margin-top: 10px;
+}
