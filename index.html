@@ -1,207 +1,281 @@
 <!DOCTYPE html>
-<html>
-	<head>
-        <title>Mayank Sindwani</title>
+<html lang="en">
+    <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Welcome to my personal portfolio of various software development endeavours.">
-        <meta name="keywords" content="Software,Engineering,Portfolio,Mayank,Sindwani">
-        <meta name="author" content="Mayank Sindwani">
-        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
-        <link href="css/ext/custom-scrollbar/jquery.mCustomScrollbar.min.css" rel="stylesheet" type="text/css">
-        <link href="css/ext/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="css/ext/bootstrap.min.css" rel="stylesheet">
-        <link href="css/design.css" rel="stylesheet" type="text/css">
+        <meta name="google-site-verification" content="3ZFM9R6arr6vbF27Bu1GFdjc22b0nO0b5NE8Nf88o9g" />
+        <title>Max Sindwani</title>
+        <link rel="icon" type="image/png" href="static/images/favicon.ico">
+        <link
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            rel="stylesheet"
+            integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+            crossorigin="anonymous">
+        <link
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            crossorigin="anonymous">
+        <link rel="stylesheet" href="static/css/design.css">
     </head>
     <body>
-         <div class="side-nav">
-            <nav class="navbar navbar-default" role="navigation">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar_collapse" aria-expanded="false">
-                        <span class="sr-only"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <div class="navbar-brand">
-                        <span class="first-name">Mayank</span>
-                        <span class="last-name">Sindwani</span>
-                    	<span class="sub-text">UI/UX Developer</span>
+        <div class="navbar">
+            <div class="sub-navbar">
+                <div class="container">
+                    <div class="contact">
+                        <span id="cinfo"></span>
                     </div>
-                </div>
-                <div class="navbar-collapse collapse" id="navbar_collapse">
-                    <ul id="site_nav" class="nav navbar-nav">
-                        <li data-target="#home_carousel" class="active">
-                        	<a href="javascript:void(0)">Home</a>
+                    <ul class="sub-navbar-menu">
+                        <li>
+                            <a title="GitHub" href="https://github.com/msindwan">
+                                <i class="fa fa-github"></i>
+                            </a>
                         </li>
-                        <li data-target=".section.profile">
-                        	<a href="javascript:void(0)">Profile</a>
+                        <li>
+                            <a title="Stack Overflow" href="http://stackoverflow.com/users/7376337/max-sindwani">
+                                <i class="fa fa-stack-overflow"></i>
+                            </a>
                         </li>
-                        <li data-target=".section.projects">
-	                        <a href="javascript:void(0)">Projects</a>
-                        </li>
-                        <li data-target=".section.contact">
-                        	<a href="javascript:void(0)">Contact</a>
+                        <li>
+                            <a title="LinkedIn" href="https://ca.linkedin.com/in/max-sindwani-43a7b95b">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
                         </li>
                     </ul>
                 </div>
-            </nav>
+            </div>
+            <div class="navbar-menu">
+                <div class="container">
+                    <h1 class="content-title">Max Sindwani</h1>
+                    <h2 class="content-subtitle">Full Stack Developer</h2>
+                </div>
+            </div>
         </div>
-        <div id="content_scroll">
-        	<div class="loader">
-	        	<img id="spinner" src="images/spinner.gif"></img>
-				<h1>Loading...</h1>
-			</div>
-        	<header id="home_carousel" class="carousel slide">
-            	<ol class="carousel-indicators">
-                	<li data-target="#home_carousel" data-slide-to="0" class="active"></li>
-                	<li data-target="#home_carousel" data-slide-to="1"></li>
-            	</ol>
-            	<div class="carousel-inner">
-                	<div class="item landing active">
-                    	<div class="fill">
-          					<div class="container fill-container">
-            					<div class="row">
-              						<div class="transparent-black landing-blurb col-md-6">
-        								<h1>Hi There!</h1>
-        								<p>
-        									The following web page is a concise portfolio that includes all my work and a synopsis of my profile. I am a software engineering student and developer with over four years of experience in web design and application development.
-        								</p>
-    								</div>
-									<div class="transparent-black landing-quote col-md-6">
-										<div class="quote">
-											<i class="fa fa-quote-left"></i>
-												A user interface is like a joke. If you have to explain it, it's not that good.
-											<i class="fa fa-quote-right"></i>
-										</div>
-										- startupvitamins
-									</div>
-    							</div>
-  							</div>
-						</div>
-            		</div>
-            		<div class="item projects">
-                		<div class="fill">
-                			<div class="container fill-container">
-            					<div class="row">
-              						<div class="transparent-black col-md-6">
-        								<h1>Projects</h1>
-        								<p>
-        									See the compilation of projects that I've worked on recently. You can download the source code with the links provided or visit my bitbucket page. Please adhere to any license agreements before use.
-        								</p>
-    								</div>
-									<div class="col-md-6"></div>
-    							</div>
-    							<div class="row">
-    								<div class="col-md-6" style="padding: 0;">
-										<div id="view_projects" class="btn btn-custom btn-lg btn-block btn-biru">View Projects</div>
-									</div>
-									<div class="col-md-6"></div>
-    							</div>
-  							</div>
-                		</div>
-                	</div>
-            	</div>
-            	<a class="left carousel-control" href="#home_carousel" data-slide="prev">
-                	<span class="icon-prev"></span>
-            	</a>
-            	<a class="right carousel-control" href="#home_carousel" data-slide="next">
-                	<span class="icon-next"></span>
-            	</a>
-        	</header>
-        	<div class="content">
-        		<div class="section profile">
-        			<h1>Profile</h1>
-        			<h2 style="text-align:center;">Here's a little bit about myself.</h2>
-					<div class="row profile-block">
-						<div class="col-xs-4">
-							<div class="profile-education">
-								<i class="fa fa-university profile-icon"></i>
-  								<h2>Education</h2>
-  								<p>
-									I am a third-year student currently pursuing a bachelors degree in Software Engineering from the University of Waterloo. Courses that have furthered my development skills include Programming Principles, Data Structures, Algorithms, and User Interfaces.
-								</p>
-							</div>
-						</div>
-						<div class="col-xs-4">
-							<div class="profile-experience">
-								<i class="fa fa-desktop profile-icon"></i>
-								<h2>Experience</h2>
-								<p>I am profficient in CSS, Javascript, and HTML along with jQuery and Bootstrap. In addition, I am experienced with python used for integration tests as well as C/C++ for Windows and Linux application development. Lastly, I use Microsoft SQL for back-end work as well as Git or SVN for version control.</p>
-				              </div>
-						</div>
-						<div class="col-xs-4">
-							<div class="profile-interests">
-								<i class="fa fa-book profile-icon"></i>
-								<h2>Interests</h2>
-								<p>
-									I am primarily interested in front-end work, namely web and graphic user interface development. Like many other developers, however, I am also interested in broadening my horizons and experimenting with new fields of software development.
-								</p>
-							</div>
-						</div>
-					</div>
-        		</div>
-        		<div class="section projects">
-        			<h1>Projects</h1>
-        		</div>
-        		<div class="section contact">
-        			<div class="row">
-        				<div class="col-xs-12">
-                            <div class="contact-body text-center">
-                                <div class="row">
-                                    <div class="contact-body-container col-lg-10 col-lg-offset-1">
-                                        <h1>Contact Me</h1>
-                                        <h4 class="contact-header">
-                                            Thank you for visiting my site! Send me a message if you have any questions, comments, or concerns.
-                                        </h4>
-                                        <p>
-                                            <a href="mailto:msindwan@uwaterloo.ca" class="contact-info">
-                                                msindwan@uwaterloo.ca
-                                            </a>
-                                            <span class="contact-info">
-                                                226-338-0545
-                                            </span>
-                                        </p>
-                                        <ul class="list-inline banner-social">
-                                            <li>
-                                                <a href="https://ca.linkedin.com/pub/max-sindwani/5b/7b9/43a" target="_" class="contact-icon">
-                                                    <i class="fa fa-linkedin"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="https://bitbucket.org/msindwan/" target="_" class="contact-icon">
-                                                    <i class="fa fa-bitbucket"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
+        <div class="section about">
+            <div class="container content-container">
+                <div class="row">
+                    <div class="col col-xs-12 col-md-12 col-lg-6">
+                        <div class="text">
+                            <h1>About Me</h1>
+                            <p>
+                                I am a software engineer with over four years of web and application development
+                                experience.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col col-xs-12 col-md-12 col-lg-6">
+                        <h2 class="carousel-title">Experienced with...</h2>
+                        <div id="technologies_carousel_container" class="carousel-container">
+                            <div id="technologies_carousel" class="carousel">
+                                <div class="carousel-item panel-one"></div>
+                                <div class="carousel-item panel-one-back back"></div>
+                                <div class="carousel-item panel-two"></div>
+                                <div class="carousel-item panel-two-back back"></div>
+                                <div class="carousel-item panel-three"></div>
+                                <div class="carousel-item panel-three-back back"></div>
+                                <div class="carousel-item panel-four"></div>
+                                <div class="carousel-item panel-four-back back"></div>
+                                <div class="carousel-item panel-five"></div>
+                                <div class="carousel-item panel-five-back back"></div>
+                                <div class="carousel-item panel-six"></div>
+                                <div class="carousel-item panel-six-back back"></div>
+                            </div>
+                            <ol class="carousel-indicators">
+                                <li data-index="0" class="active"></li>
+                                <li data-index="1"></li>
+                                <li data-index="2"></li>
+                                <li data-index="3"></li>
+                                <li data-index="4"></li>
+                                <li data-index="5"></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section projects">
+            <div class="container content-container">
+                <h1>Projects</h1>
+                <div class="col col-xs-12 col-md-7">
+                    <a href="https://github.com/msindwan/shoebox">
+                        <div class="well shoebox">
+                            <h1 class="title">SHOEBOX</h1>
+                            <div class="description">
+                                 Shoebox is an android application that helps you budget expenses and track your spending.
+                                 It aims to be as uncomplicated as possible by only providing features essential to your daily
+                                 spending.
+                                 <div class="tags">
+                                     <img src="https://img.shields.io/github/release/msindwan/shoebox.svg?style=flat-square"></img>
+                                     <img src="https://img.shields.io/github/languages/top/msindwan/shoebox.svg?style=flat-square&colorB=559c99"></img>
+                                 </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col col-xs-12 col-md-5">
+                    <a href="https://github.com/msindwan/zipkin-view">
+                        <div class="well zipkin-view">
+                            <h1 class="title">ZIPKIN-VIEW</h1>
+                            <div class="description">
+                                 Zipkin-View is an alternative UI for OpenZipkin/zipkin that tries to re-invent the existing
+                                 layout while improving the usability and performance of the client-side application.
+                                 Zipkin View is built from scratch using React and other JavaScript technologies.
+                                 <div class="tags">
+                                     <img src="https://img.shields.io/github/release/msindwan/zipkin-view.svg?style=flat-square"></img>
+                                     <img src="https://img.shields.io/github/languages/top/msindwan/zipkin-view.svg?style=flat-square&colorB=559c99"></img>
+                                 </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col col-xs-12 col-md-5">
+                    <a href="https://github.com/msindwan/sherlock">
+                        <div class="well sherlock">
+                            <h1 class="title">SHERLOCK</h1>
+                            <div class="description">
+                                 Inspired by Opengrok, Sherlock is a Java application that provides a web interface and
+                                 an automatic indexer to search files over a network. Sherlock is agnositic to source
+                                 control and directory structure.
+                                 <div class="tags">
+                                     <img src="https://img.shields.io/github/release/msindwan/sherlock.svg?style=flat-square"></img>
+                                     <img src="https://img.shields.io/github/languages/top/msindwan/sherlock.svg?style=flat-square&colorB=559c99"></img>
+                                 </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col col-xs-12 col-md-7">
+                    <a href="https://github.com/msindwan/handbook">
+                        <div class="well reduxion">
+                            <h1 class="title">HANDBOOK</h1>
+                            <div class="description">
+                                Handbook is a simple android application for saving and viewing tutorials on your mobile
+                                device.
+                                <div class="tags">
+                                    <img src="https://img.shields.io/github/release/msindwan/handbook.svg?style=flat-square"></img>
+                                    <img src="https://img.shields.io/github/languages/top/msindwan/handbook.svg?style=flat-square&colorB=559c99"></img>
                                 </div>
                             </div>
-						</div>
-					</div>
-        		</div>
-        	</div>
-        	<footer id="footer">
-    			<p>© 2015 <span style="color:#61868A;">Mayank Sindwani.</span> All rights reserved.</p>
-			</footer>
-
-			<!-- templates -->
-			<template id="project_container">
-				<div class="row project-block">
-					<div class="col col-xs-6 col-1"></div>
-					<div class="col col-xs-6 col-2"></div>
-				</div>
-			</template>
-		</div>
-        <script type="text/javascript" src="js/ext/jquery.js"></script>
-        <script type="text/javascript" src="js/ext/jquery.mCustomScrollbar.concat.min.js"></script>
-        <script type="text/javascript" src="js/ext/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/app.js"></script>
-        <script type="text/javascript">
-                window.addEventListener("load", function(e) {
-                   Portfolio.UI().init();
-                });
-        </script>
-	</body>
+                        </div>
+                    </a>
+                </div>
+                <div class="col col-xs-12 col-md-7">
+                    <a href="https://www.npmjs.com/package/reduxion">
+                        <div class="well reduxion">
+                            <h1 class="title">REDUXION</h1>
+                            <div class="description">
+                                Reduxion is another take on Redux that incorporates additional ES6 functionality and
+                                flux design patterns including a global dispatcher and class inheritence.
+                                <div class="tags">
+                                    <img src="https://img.shields.io/github/release/msindwan/reduxion.svg?style=flat-square"></img>
+                                    <img src="https://img.shields.io/github/languages/top/msindwan/reduxion.svg?style=flat-square&colorB=559c99"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col col-xs-12 col-md-5">
+                    <a href="https://chrome.google.com/webstore/detail/mycache/cfgbkangadnolaljljeofhegbkjedpmf">
+                        <div class="well mycache">
+                            <h1 class="title">MYCACHE</h1>
+                            <div class="description">
+                                MyCache is a Chrome extension that automatically saves pages for offline viewing. It
+                                provides a user interface for browsing pages as well as defining rules on what pages to
+                                cache.
+                                <div class="tags">
+                                    <img src="https://img.shields.io/chrome-web-store/v/cfgbkangadnolaljljeofhegbkjedpmf.svg?style=flat-square"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col col-xs-12 col-md-5">
+                    <a href="https://www.npmjs.com/package/mhtml2html">
+                        <div class="well mhtml2html">
+                            <h1 class="title">MHTML2HTML</h1>
+                            <div class="description">
+                                Mhtml2html is an npm package that converts MHTML files to single-page HTML files. It
+                                includes a command line interface for handling files as well as a script for in-browser
+                                conversions.
+                                <div class="tags">
+                                    <img src="https://img.shields.io/github/release/msindwan/mhtml2html.svg?style=flat-square"></img>
+                                    <img src="https://img.shields.io/github/languages/top/msindwan/mhtml2html.svg?style=flat-square&colorB=559c99"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col col-xs-12 col-md-7">
+                    <a href="chordgen">
+                        <div class="well chordgen">
+                            <h1 class="title">CHORDGEN</h1>
+                            <div class="description">
+                                Chordgen is a website that generates Chord distributed hash table graphs for small
+                                values of m.
+                                <div class="tags">
+                                    <img src="https://img.shields.io/github/release/msindwan/chordgen.svg?style=flat-square"></img>
+                                    <img src="https://img.shields.io/github/languages/top/msindwan/chordgen.svg?style=flat-square&colorB=559c99"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col col-xs-12 col-md-7">
+                    <a href="https://github.com/msindwan/serverpp">
+                        <div class="well serverpp">
+                            <h1 class="title">SERVER++</h1>
+                            <div class="description">
+                                Server++ is a basic HTTP server for Windows and Linux written in C++. Please note that
+                                it is still under development.
+                                <div class="tags">
+                                    <img src="https://img.shields.io/github/release/msindwan/serverpp.svg?style=flat-square"></img>
+                                    <img src="https://img.shields.io/github/languages/top/msindwan/serverpp.svg?style=flat-square&colorB=559c99"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col col-xs-12 col-md-5">
+                    <a href="https://github.com/msindwan/jconf">
+                        <div class="well jconf">
+                            <h1 class="title">JCONF</h1>
+                            <div class="description">
+                                JCONF is a JSON parser for C/C++ applications intended for JSON-based configuration
+                                files. JCONF exposes an easy-to-use api that allows users to access object elements
+                                quickly.
+                                <div class="tags">
+                                    <img src="https://img.shields.io/github/release/msindwan/jconf.svg?style=flat-square"></img>
+                                    <img src="https://img.shields.io/github/languages/top/msindwan/jconf.svg?style=flat-square&colorB=559c99"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <footer>
+                <div class="container">
+                    <div class="footer-nav">
+                        <p>
+                           Created and Maintained by <span class="footer-text">Mayank (Max) Sindwani.</span>
+                        </p>
+                        <ul>
+                            <li>
+                                <a href="https://github.com/msindwan/msindwan.github.io#browser-support">
+                                    Browser Support
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/msindwan/msindwan.github.io#legal">
+                                    Legal
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script type="text/javascript" src="static/js/modernizr.js"></script>
+        <script type="text/javascript" src="static/js/app.js"></script>
+    </body>
 </html>

@@ -1,0 +1,476 @@
+/**
+ * Portfolio Stylesheet
+ *
+ * @author Mayank Sindwani
+ * @date 2016-03-13
+ */
+
+
+/* Font Imports */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,100');
+html {
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+body {
+    background: #3D3D3D;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: #459E82 !important;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    float: right;
+    color: white;
+}
+
+ul li {
+    list-style: none;
+    float: left;
+    padding: 5px 10px;
+    font-size: 20px;
+}
+
+
+/* Cascading bootstrap styles */
+
+.well {
+    background: #4E4E4E;
+    border: 0;
+    border-radius: 0;
+    height: 205px;
+    color: #666666;
+    text-align: center;
+    font-size: 42px;
+    background-size: 1425px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    position: relative;
+    -webkit-transform: translateY(0);
+    -webkit-transition: all .6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all .6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.well:hover {
+    box-shadow: 0px 0px 10px 2px #2E2E2E;
+    transform: scale(1.1, 1.1);
+}
+
+.well:after {
+    content: "";
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    -webkit-transition: all .6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all .6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+
+/* Navigation */
+
+.navbar {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.navbar .content-title {
+    margin: 13px;
+    text-transform: uppercase;
+    color: #716E6E;
+    display: inline-block;
+    line-height: 65px;
+    font-weight: 100;
+    margin-bottom: 0px;
+}
+
+.navbar .content-subtitle {
+    display: inline-block;
+    color: #8B8B8B;
+    font-weight: 100;
+    font-size: 25px;
+    line-height: 65px;
+    margin: 12px;
+    margin-top: -20px;
+}
+
+.sub-navbar {
+    background: #313131;
+    position: fixed;
+    z-index: 20;
+    width: 100%;
+    min-width: 320px;
+}
+
+.navbar-menu {
+    margin-top: 35px;
+}
+
+.contact {
+    display: inline-block;
+    margin: 10px 15px;
+    color: white;
+}
+
+.contact .email-link {
+    color: white;
+}
+
+.contact .email-link .fa {
+    padding-right: 10px;
+}
+
+
+/* About Section */
+
+.section.about {
+    min-height: 350px;
+    background: #315F5C;
+}
+
+.section.about .content-container {
+    padding: 40px 15px;
+    overflow: hidden;
+}
+
+.section.about .content-container .row {
+    margin: 0;
+}
+
+.section.about .content-container .text {
+    margin-top: 75px;
+}
+
+.section.about .content-container .text h1 {
+    margin: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.section.about .content-container .text p {
+    font-size: 20px;
+    color: white;
+    font-weight: 100;
+}
+
+.carousel-title {
+    text-align: center;
+    color: white;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.carousel-container {
+    width: 400px;
+    overflow: hidden;
+    display: block;
+    margin: auto;
+    height: 215px;
+}
+
+.carousel-container .carousel {
+    -webkit-transition: margin 1s;
+    -moz-transition: margin 1s;
+    -ms-transition: margin 1s;
+    -o-transition: margin 1s;
+    transition: margin 1s;
+}
+
+.carousel-indicators {
+    top: 250px;
+}
+
+.carousel-container .carousel .carousel-item {
+    display: block;
+    width: 100%;
+    height: 215px;
+    font-size: 5em;
+    text-align: center;
+    color: #FFF;
+    border-radius: 2px;
+    background-color: #444343 !important;
+    background-position: 50% !important;
+}
+
+.carousel-container .carousel .back {
+    display: none;
+}
+
+.carousel-container .carousel .panel-one {
+    background: url('../images/HTML5_Badge.svg') no-repeat;
+    background-size: 130px;
+}
+
+.carousel-container .carousel .panel-two {
+    background: url('../images/flux.png') no-repeat;
+    background-size: 150px;
+}
+
+.carousel-container .carousel .panel-three {
+    background: url('../images/python-logo-generic.svg') no-repeat;
+    background-size: 180px;
+}
+
+.carousel-container .carousel .panel-four {
+    background: url('../images/node.png') no-repeat;
+    background-size: 175px;
+}
+
+.carousel-container .carousel .panel-five {
+    background: url('../images/Android_Robot_200.png') no-repeat;
+    background-size: 115px;
+}
+
+.carousel-container .carousel .panel-six {
+    background: url('../images/react.png') no-repeat;
+    background-size: 150px;
+}
+
+.section.about .content-container .carousel-container.three-dimensional-carousel {
+    margin: 0 auto;
+    width: 250px !important;
+    height: 200px;
+    position: relative;
+    perspective: 1000px;
+    margin-top: 50px;
+    overflow: visible;
+}
+
+.section.about .content-container .carousel-container.three-dimensional-carousel .carousel {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -ms-transition: transform 1s;
+    -o-transition: transform 1s;
+    transition: transform 1s;
+    width: 250px;
+}
+
+.section.about .content-container .carousel-container.three-dimensional-carousel .carousel-indicators {
+    top: 175px;
+}
+
+.section.about .content-container .carousel-container.three-dimensional-carousel .carousel .carousel-item {
+    position: absolute;
+    display: inline-block;
+    width: 250px;
+    height: 175px;
+}
+
+.section.about .content-container .carousel-container.three-dimensional-carousel .carousel .back {
+    background: #363636 !important;
+}
+
+.section.about .content-container .carousel-container.three-dimensional-carousel .carousel .panel-one {
+    transform: rotateY(0deg) translateZ(245px);
+}
+
+.section.about .content-container .carousel-container.three-dimensional-carousel .carousel .panel-one-back {
+    transform: rotateY(0deg) translateZ(244px);
+}
+
+.section.about .content-container .carousel-container.three-dimensional-carousel .carousel .panel-two {
+    transform: rotateY(60deg) translateZ(245px);
+}
+
+.section.about .content-container .carousel-container.three-dimensional-carousel .carousel .panel-two-back {
+    transform: rotateY(60deg) translateZ(244px);
+}
+
+.section.about .content-container .carousel-container.three-dimensional-carousel .carousel .panel-three {
+    transform: rotateY(120deg) translateZ(250px);
+}
+
+.section.about .content-container .carousel-container.three-dimensional-carousel .carousel .panel-three-back {
+    transform: rotateY(120deg) translateZ(249px);
+}
+
+.section.about .content-container .carousel-container.three-dimensional-carousel .carousel .panel-four {
+    transform: rotateY(180deg) translateZ(250px);
+}
+
+.section.about .content-container .carousel-container.three-dimensional-carousel .carousel .panel-four-back {
+    transform: rotateY(180deg) translateZ(249px);
+}
+
+.section.about .content-container .carousel-container.three-dimensional-carousel .carousel .panel-five {
+    transform: rotateY(240deg) translateZ(250px);
+}
+
+.section.about .content-container .carousel-container.three-dimensional-carousel .carousel .panel-five-back {
+    transform: rotateY(240deg) translateZ(249px);
+}
+
+.section.about .content-container .carousel-container.three-dimensional-carousel .carousel .panel-six {
+    transform: rotateY(300deg) translateZ(245px);
+}
+
+.section.about .content-container .carousel-container.three-dimensional-carousel .carousel .panel-six-back {
+    transform: rotateY(300deg) translateZ(244px);
+}
+
+
+/* Projects Section */
+
+.section.projects .content-container {
+    padding-top: 10px;
+}
+
+.section.projects .content-container h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin: 13px;
+    margin-bottom: 20px;
+}
+
+.section.projects .well .description {
+    font-size: 12px;
+    color: #A7A7A7;
+}
+
+.section.projects .well .title {
+    font-size: 42px;
+    font-weight: 300;
+}
+
+.footer-nav {
+    height: 100px;
+    border-top: 1px solid #383838;
+    margin: 13px;
+}
+
+.footer-nav p {
+    font-weight: 100;
+    color: white;
+    padding-top: 10px;
+    display: inline-block;
+}
+
+.footer-nav .footer-text {
+    color: #42807B;
+    padding-top: 10px;
+    font-weight: bolder;
+}
+
+.footer-nav ul li {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+/* Responsive Designs */
+
+@media(max-width: 1200px) {
+    .section.about .content-container .text {
+        margin-top: 0px;
+        max-width: 726px;
+        text-align: center;
+        display: block;
+        margin: auto;
+    }
+}
+
+@media(max-width: 990px) {
+    .section.projects .well {
+        height: auto;
+    }
+}
+
+@media(max-width: 479px) {
+    #technologies_carousel_container {
+        width: auto;
+    }
+}
+
+@media(max-width: 400px) {
+    .section.projects .well .title {
+        font-size: 40px;
+    }
+    .footer-nav {
+        text-align: center;
+    }
+    .footer-nav ul {
+        float: none;
+    }
+    .footer-nav ul li {
+        float: none;
+    }
+    .email-text {
+        display: none;
+    }
+    .container {
+        padding: 0;
+    }
+    .section.about .content-container {
+        padding: 40px 0px;
+    }
+    .sub-navbar-menu {
+        position: absolute;
+        right: 0;
+        top: 45px;
+        width: 40px;
+        background: #313131;
+    }
+}
+
+.status-tag {
+    font-size: 12px;
+    color: white;
+    font-weight: 100;
+    padding: 8px;
+    border-radius: 2px;
+    margin-top: 10px;
+    display: block;
+    width: 125px;
+}
+
+.status-tag.released {
+    background: #315f5c;
+}
+
+.status-tag.in-progress {
+    background: #964545;
+    font-style: italic;
+}
+
+.status-tag.beta {
+    background: #9c702e;
+    font-style: italic;
+}
+
+.tags {
+    margin-top: 10px;
+}
