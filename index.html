@@ -1,281 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="google-site-verification" content="3ZFM9R6arr6vbF27Bu1GFdjc22b0nO0b5NE8Nf88o9g" />
-        <title>Max Sindwani</title>
-        <link rel="icon" type="image/png" href="static/images/favicon.ico">
-        <link
-            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-            rel="stylesheet"
-            integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-            crossorigin="anonymous">
-        <link
-            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-            crossorigin="anonymous">
-        <link rel="stylesheet" href="static/css/design.css">
-    </head>
-    <body>
-        <div class="navbar">
-            <div class="sub-navbar">
-                <div class="container">
-                    <div class="contact">
-                        <span id="cinfo"></span>
-                    </div>
-                    <ul class="sub-navbar-menu">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Max Sindwani is a software engineer specializing in web and mobile application development">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://img.shields.io">
+    <title>Max Sindwani</title>
+    <link rel="icon" type="image/png" href="static/images/favicon.ico">
+    <link rel="stylesheet" href="static/css/design.css">
+</head>
+
+<body>
+    <header>
+        <div class="profile-links">
+            <div class="container">
+                <div class="contact">
+                    <span id="cinfo"></span>
+                </div>
+                <div class="social-media-container">
+                    <ul class="social-media">
                         <li>
-                            <a title="GitHub" href="https://github.com/msindwan">
-                                <i class="fa fa-github"></i>
+                            <a href="https://github.com/msindwan" target="_blank" rel="noopener noreferrer"
+                                aria-label="GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64"
+                                    shape-rendering="geometricPrecision" text-rendering="geometricPrecision"
+                                    image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+                                    viewBox="0 0 640 640">
+                                    <path
+                                        d="M319.988 7.973C143.293 7.973 0 151.242 0 327.96c0 141.392 91.678 261.298 218.826 303.63 16.004 2.964 21.886-6.957 21.886-15.414 0-7.63-.319-32.835-.449-59.552-89.032 19.359-107.8-37.772-107.8-37.772-14.552-36.993-35.529-46.831-35.529-46.831-29.032-19.879 2.209-19.442 2.209-19.442 32.126 2.245 49.04 32.954 49.04 32.954 28.56 48.922 74.883 34.76 93.131 26.598 2.882-20.681 11.15-34.807 20.315-42.803-71.08-8.067-145.797-35.516-145.797-158.14 0-34.926 12.52-63.485 32.965-85.88-3.33-8.078-14.291-40.606 3.083-84.674 0 0 26.87-8.61 88.029 32.8 25.512-7.075 52.878-10.642 80.056-10.76 27.2.118 54.614 3.673 80.162 10.76 61.076-41.386 87.922-32.8 87.922-32.8 17.398 44.08 6.485 76.631 3.154 84.675 20.516 22.394 32.93 50.953 32.93 85.879 0 122.907-74.883 149.93-146.117 157.856 11.481 9.921 21.733 29.398 21.733 59.233 0 42.792-.366 77.28-.366 87.804 0 8.516 5.764 18.473 21.992 15.354 127.076-42.354 218.637-162.274 218.637-303.582 0-176.695-143.269-319.988-320-319.988l-.023.107z" />
+                                </svg>
                             </a>
                         </li>
                         <li>
-                            <a title="Stack Overflow" href="http://stackoverflow.com/users/7376337/max-sindwani">
-                                <i class="fa fa-stack-overflow"></i>
+                            <a href="http://stackoverflow.com/users/7376337/max-sindwani" target="_blank"
+                                rel="noopener noreferrer" aria-label="StackOverflow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64"
+                                    shape-rendering="geometricPrecision" text-rendering="geometricPrecision"
+                                    image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+                                    viewBox="0 0 640 640">
+                                    <path
+                                        d="M640 400.009V640H0V400.009h79.997v159.994h480.006V400.009H640zm-519.999 40.004h399.997v79.997L120.001 520v-79.986zm9.484-86.623l17.316-78.107 390.524 86.564-17.327 78.12-390.513-86.577zm45.32-160.549l33.803-72.52 362.52 169.03-33.803 72.532-362.52-169.04zm445.033 33.083l-48.721 63.474L253.75 45.875 288.948 0h36.414l294.476 225.924z" />
+                                </svg>
                             </a>
                         </li>
                         <li>
-                            <a title="LinkedIn" href="https://ca.linkedin.com/in/max-sindwani-43a7b95b">
-                                <i class="fa fa-linkedin"></i>
+                            <a href="https://ca.linkedin.com/in/max-sindwani-43a7b95b" target="_blank"
+                                rel="noopener noreferrer" aria-label="LinkedIn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 333333 333333"
+                                    shape-rendering="geometricPrecision" text-rendering="geometricPrecision"
+                                    image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd">
+                                    <path
+                                        d="M119066 107135h65865v33765l952 2c9173-16456 31602-33765 65046-33765 69550-2 82413 43280 82413 99584v114694l-68689 2V219745c0-24237-504-55437-35716-55437-35765 0-41245 26383-41245 53672v103438h-68626V107137zM71447 47613c0 19716-16000 35715-35716 35715S9 67328 9 47613c0-19716 16006-35716 35722-35716s35716 16000 35716 35716zM9 107135h71438v214281H9V107135z" />
+                                </svg>
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="navbar-menu">
-                <div class="container">
-                    <h1 class="content-title">Max Sindwani</h1>
-                    <h2 class="content-subtitle">Full Stack Developer</h2>
-                </div>
+        </div>
+        <div class="profile-title">
+            <div class="container">
+                <h1 class="content-title">Max Sindwani</h1>
+                <p class="content-subtitle">Software Engineer</p>
             </div>
         </div>
-        <div class="section about">
-            <div class="container content-container">
-                <div class="row">
-                    <div class="col col-xs-12 col-md-12 col-lg-6">
-                        <div class="text">
-                            <h1>About Me</h1>
-                            <p>
-                                I am a software engineer with over four years of web and application development
-                                experience.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col col-xs-12 col-md-12 col-lg-6">
-                        <h2 class="carousel-title">Experienced with...</h2>
-                        <div id="technologies_carousel_container" class="carousel-container">
-                            <div id="technologies_carousel" class="carousel">
-                                <div class="carousel-item panel-one"></div>
-                                <div class="carousel-item panel-one-back back"></div>
-                                <div class="carousel-item panel-two"></div>
-                                <div class="carousel-item panel-two-back back"></div>
-                                <div class="carousel-item panel-three"></div>
-                                <div class="carousel-item panel-three-back back"></div>
-                                <div class="carousel-item panel-four"></div>
-                                <div class="carousel-item panel-four-back back"></div>
-                                <div class="carousel-item panel-five"></div>
-                                <div class="carousel-item panel-five-back back"></div>
-                                <div class="carousel-item panel-six"></div>
-                                <div class="carousel-item panel-six-back back"></div>
-                            </div>
-                            <ol class="carousel-indicators">
-                                <li data-index="0" class="active"></li>
-                                <li data-index="1"></li>
-                                <li data-index="2"></li>
-                                <li data-index="3"></li>
-                                <li data-index="4"></li>
-                                <li data-index="5"></li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section projects">
-            <div class="container content-container">
-                <h1>Projects</h1>
-                <div class="col col-xs-12 col-md-7">
-                    <a href="https://github.com/msindwan/shoebox">
-                        <div class="well shoebox">
-                            <h1 class="title">SHOEBOX</h1>
-                            <div class="description">
-                                 Shoebox is an android application that helps you budget expenses and track your spending.
-                                 It aims to be as uncomplicated as possible by only providing features essential to your daily
-                                 spending.
-                                 <div class="tags">
-                                     <img src="https://img.shields.io/github/release/msindwan/shoebox.svg?style=flat-square"></img>
-                                     <img src="https://img.shields.io/github/languages/top/msindwan/shoebox.svg?style=flat-square&colorB=559c99"></img>
-                                 </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col col-xs-12 col-md-5">
-                    <a href="https://github.com/msindwan/zipkin-view">
-                        <div class="well zipkin-view">
-                            <h1 class="title">ZIPKIN-VIEW</h1>
-                            <div class="description">
-                                 Zipkin-View is an alternative UI for OpenZipkin/zipkin that tries to re-invent the existing
-                                 layout while improving the usability and performance of the client-side application.
-                                 Zipkin View is built from scratch using React and other JavaScript technologies.
-                                 <div class="tags">
-                                     <img src="https://img.shields.io/github/release/msindwan/zipkin-view.svg?style=flat-square"></img>
-                                     <img src="https://img.shields.io/github/languages/top/msindwan/zipkin-view.svg?style=flat-square&colorB=559c99"></img>
-                                 </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col col-xs-12 col-md-5">
-                    <a href="https://github.com/msindwan/sherlock">
-                        <div class="well sherlock">
-                            <h1 class="title">SHERLOCK</h1>
-                            <div class="description">
-                                 Inspired by Opengrok, Sherlock is a Java application that provides a web interface and
-                                 an automatic indexer to search files over a network. Sherlock is agnositic to source
-                                 control and directory structure.
-                                 <div class="tags">
-                                     <img src="https://img.shields.io/github/release/msindwan/sherlock.svg?style=flat-square"></img>
-                                     <img src="https://img.shields.io/github/languages/top/msindwan/sherlock.svg?style=flat-square&colorB=559c99"></img>
-                                 </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col col-xs-12 col-md-7">
-                    <a href="https://github.com/msindwan/handbook">
-                        <div class="well reduxion">
-                            <h1 class="title">HANDBOOK</h1>
-                            <div class="description">
-                                Handbook is a simple android application for saving and viewing tutorials on your mobile
-                                device.
-                                <div class="tags">
-                                    <img src="https://img.shields.io/github/release/msindwan/handbook.svg?style=flat-square"></img>
-                                    <img src="https://img.shields.io/github/languages/top/msindwan/handbook.svg?style=flat-square&colorB=559c99"></img>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col col-xs-12 col-md-7">
-                    <a href="https://www.npmjs.com/package/reduxion">
-                        <div class="well reduxion">
-                            <h1 class="title">REDUXION</h1>
-                            <div class="description">
-                                Reduxion is another take on Redux that incorporates additional ES6 functionality and
-                                flux design patterns including a global dispatcher and class inheritence.
-                                <div class="tags">
-                                    <img src="https://img.shields.io/github/release/msindwan/reduxion.svg?style=flat-square"></img>
-                                    <img src="https://img.shields.io/github/languages/top/msindwan/reduxion.svg?style=flat-square&colorB=559c99"></img>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col col-xs-12 col-md-5">
-                    <a href="https://chrome.google.com/webstore/detail/mycache/cfgbkangadnolaljljeofhegbkjedpmf">
-                        <div class="well mycache">
-                            <h1 class="title">MYCACHE</h1>
-                            <div class="description">
-                                MyCache is a Chrome extension that automatically saves pages for offline viewing. It
-                                provides a user interface for browsing pages as well as defining rules on what pages to
-                                cache.
-                                <div class="tags">
-                                    <img src="https://img.shields.io/chrome-web-store/v/cfgbkangadnolaljljeofhegbkjedpmf.svg?style=flat-square"></img>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col col-xs-12 col-md-5">
-                    <a href="https://www.npmjs.com/package/mhtml2html">
-                        <div class="well mhtml2html">
-                            <h1 class="title">MHTML2HTML</h1>
-                            <div class="description">
-                                Mhtml2html is an npm package that converts MHTML files to single-page HTML files. It
-                                includes a command line interface for handling files as well as a script for in-browser
-                                conversions.
-                                <div class="tags">
-                                    <img src="https://img.shields.io/github/release/msindwan/mhtml2html.svg?style=flat-square"></img>
-                                    <img src="https://img.shields.io/github/languages/top/msindwan/mhtml2html.svg?style=flat-square&colorB=559c99"></img>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col col-xs-12 col-md-7">
-                    <a href="chordgen">
-                        <div class="well chordgen">
-                            <h1 class="title">CHORDGEN</h1>
-                            <div class="description">
-                                Chordgen is a website that generates Chord distributed hash table graphs for small
-                                values of m.
-                                <div class="tags">
-                                    <img src="https://img.shields.io/github/release/msindwan/chordgen.svg?style=flat-square"></img>
-                                    <img src="https://img.shields.io/github/languages/top/msindwan/chordgen.svg?style=flat-square&colorB=559c99"></img>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col col-xs-12 col-md-7">
-                    <a href="https://github.com/msindwan/serverpp">
-                        <div class="well serverpp">
-                            <h1 class="title">SERVER++</h1>
-                            <div class="description">
-                                Server++ is a basic HTTP server for Windows and Linux written in C++. Please note that
-                                it is still under development.
-                                <div class="tags">
-                                    <img src="https://img.shields.io/github/release/msindwan/serverpp.svg?style=flat-square"></img>
-                                    <img src="https://img.shields.io/github/languages/top/msindwan/serverpp.svg?style=flat-square&colorB=559c99"></img>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col col-xs-12 col-md-5">
-                    <a href="https://github.com/msindwan/jconf">
-                        <div class="well jconf">
-                            <h1 class="title">JCONF</h1>
-                            <div class="description">
-                                JCONF is a JSON parser for C/C++ applications intended for JSON-based configuration
-                                files. JCONF exposes an easy-to-use api that allows users to access object elements
-                                quickly.
-                                <div class="tags">
-                                    <img src="https://img.shields.io/github/release/msindwan/jconf.svg?style=flat-square"></img>
-                                    <img src="https://img.shields.io/github/languages/top/msindwan/jconf.svg?style=flat-square&colorB=559c99"></img>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <footer>
-                <div class="container">
-                    <div class="footer-nav">
+    </header>
+    <main>
+        <section class="profile-about">
+            <div class="container">
+                <div class="about-panel description">
+                    <div class="text">
+                        <h2>About Me</h2>
                         <p>
-                           Created and Maintained by <span class="footer-text">Mayank (Max) Sindwani.</span>
+                            I am a software engineer with over five years of web and mobile application development
+                            experience.
                         </p>
+                        <p class="carousel-title">Experienced with...</p>
                         <ul>
-                            <li>
-                                <a href="https://github.com/msindwan/msindwan.github.io#browser-support">
-                                    Browser Support
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/msindwan/msindwan.github.io#legal">
-                                    Legal
-                                </a>
-                            </li>
+                            <li>HTML and CSS</li>
+                            <li>React</li>
+                            <li>Android Development (Java and Kotlin)</li>
+                            <li>Node.js</li>
+                            <li>Python</li>
+                            <li>Java</li>
                         </ul>
                     </div>
                 </div>
-            </footer>
+                <div class="about-panel">
+                    <div id="technologies_carousel_container" class="carousel-container">
+                        <div id="technologies_carousel" class="carousel">
+                            <div class="carousel-item panel-one"></div>
+                            <div class="carousel-item panel-one-back back"></div>
+                            <div class="carousel-item panel-two"></div>
+                            <div class="carousel-item panel-two-back back"></div>
+                            <div class="carousel-item panel-three"></div>
+                            <div class="carousel-item panel-three-back back"></div>
+                            <div class="carousel-item panel-four"></div>
+                            <div class="carousel-item panel-four-back back"></div>
+                            <div class="carousel-item panel-five"></div>
+                            <div class="carousel-item panel-five-back back"></div>
+                            <div class="carousel-item panel-six"></div>
+                            <div class="carousel-item panel-six-back back"></div>
+                        </div>
+                        <ol class="carousel-indicators">
+                            <li data-index="0" class="active"></li>
+                            <li data-index="1"></li>
+                            <li data-index="2"></li>
+                            <li data-index="3"></li>
+                            <li data-index="4"></li>
+                            <li data-index="5"></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="profile-projects">
+            <div class="container content-container">
+                <h2>Projects</h2>
+                <div class="project-cards">
+                    <div class="project-card project-card-large">
+                        <a href="https://github.com/msindwan/shoebox">
+                            <div class="well shoebox">
+                                <h3>SHOEBOX</h3>
+                                <div class="project-description">
+                                    Shoebox is an android application that helps you budget expenses and track your
+                                    spending.
+                                    It aims to be as uncomplicated as possible by only providing features essential to
+                                    your
+                                    daily
+                                    spending.
+                                </div>
+                                <div class="tags">
+                                    <img alt="latest release for shoebox"
+                                        src="https://img.shields.io/github/release/msindwan/shoebox.svg?style=flat-square"></img>
+                                    <img alt="primary language for shoebox"
+                                        src="https://img.shields.io/github/languages/top/msindwan/shoebox.svg?style=flat-square&colorB=559c99"></img>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-card project-card-small">
+                        <a href="https://github.com/msindwan/zipkin-view">
+                            <div class="well zipkin-view">
+                                <h3>ZIPKIN-VIEW</h3>
+                                <div class="project-description">
+                                    Zipkin-View is an alternative UI for OpenZipkin/zipkin that re-invents the
+                                    existing layout.
+                                </div>
+                                <div class="tags">
+                                    <img alt="latest release for zipkin-view"
+                                        src="https://img.shields.io/github/release/msindwan/zipkin-view.svg?style=flat-square"></img>
+                                    <img alt="primary language for zipkin-view"
+                                        src="https://img.shields.io/github/languages/top/msindwan/zipkin-view.svg?style=flat-square&colorB=559c99"></img>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-card project-card-small">
+                        <a href="https://github.com/msindwan/handbook">
+                            <div class="well reduxion">
+                                <h3>HANDBOOK</h3>
+                                <div class="project-description">
+                                    Handbook is a simple android application for saving and viewing tutorials on your
+                                    mobile
+                                    device.
+                                </div>
+                                <div class="tags">
+                                    <img alt="latest release for handbook"
+                                        src="https://img.shields.io/github/release/msindwan/handbook.svg?style=flat-square"></img>
+                                    <img alt="primary language for handbook"
+                                        src="https://img.shields.io/github/languages/top/msindwan/handbook.svg?style=flat-square&colorB=559c99"></img>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-card project-card-large">
+                        <a href="https://github.com/msindwan/sherlock">
+                            <div class="well sherlock">
+                                <h3>SHERLOCK</h1>
+                                    <div class="project-description">
+                                        Inspired by Opengrok, Sherlock is a Java application that provides a web
+                                        interface and
+                                        an automatic indexer to search files over a network.
+                                    </div>
+                                    <div class="tags">
+                                        <img alt="latest release for sherlock"
+                                            src="https://img.shields.io/github/release/msindwan/sherlock.svg?style=flat-square"></img>
+                                        <img alt="primary language for sherlock"
+                                            src="https://img.shields.io/github/languages/top/msindwan/sherlock.svg?style=flat-square&colorB=559c99"></img>
+                                    </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-card project-card-large">
+                        <a href="https://chrome.google.com/webstore/detail/mycache/cfgbkangadnolaljljeofhegbkjedpmf">
+                            <div class="well mycache">
+                                <h3>MYCACHE</h3>
+                                <div class="project-description">
+                                    MyCache is a Chrome extension that automatically saves pages for offline viewing.
+                                    You can browse saved pages and add rules for what you want to cache.
+                                </div>
+                                <div class="tags">
+                                    <img alt="latest version of mycache"
+                                        src="https://img.shields.io/chrome-web-store/v/cfgbkangadnolaljljeofhegbkjedpmf.svg?style=flat-square"></img>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-card project-card-small">
+                        <a href="https://www.npmjs.com/package/reduxion">
+                            <div class="well reduxion">
+                                <h3>REDUXION</h3>
+                                <div class="project-description">
+                                    Reduxion is another take on Redux that incorporates additional ES6 functionality and
+                                    flux design patterns.
+                                </div>
+                                <div class="tags">
+                                    <img alt="latest release for reduxion"
+                                        src="https://img.shields.io/github/release/msindwan/reduxion.svg?style=flat-square"></img>
+                                    <img alt="primary language for reduxion"
+                                        src="https://img.shields.io/github/languages/top/msindwan/reduxion.svg?style=flat-square&colorB=559c99"></img>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-card project-card-small">
+                        <a href="https://www.npmjs.com/package/mhtml2html">
+                            <div class="well mhtml2html">
+                                <h3>MHTML2HTML</h3>
+                                <div class="project-description">
+                                    Mhtml2html is an npm package that converts MHTML files to single-page HTML files. It
+                                    supports node.js and browsers.
+                                </div>
+                                <div class="tags">
+                                    <img alt="latest release for mhtml2html"
+                                        src="https://img.shields.io/github/release/msindwan/mhtml2html.svg?style=flat-square"></img>
+                                    <img alt="primary language for mhtml2html"
+                                        src="https://img.shields.io/github/languages/top/msindwan/mhtml2html.svg?style=flat-square&colorB=559c99"></img>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-card project-card-large">
+                        <a href="chordgen">
+                            <div class="well chordgen">
+                                <h3>CHORDGEN</h1>
+                                    <div class="project-description">
+                                        Chordgen is a website that generates Chord distributed hash table graphs for
+                                        small
+                                        values of m.
+                                    </div>
+                                    <div class="tags">
+                                        <img alt="latest release for chordgen"
+                                            src="https://img.shields.io/github/release/msindwan/chordgen.svg?style=flat-square"></img>
+                                        <img alt="primary language for chordgen"
+                                            src="https://img.shields.io/github/languages/top/msindwan/chordgen.svg?style=flat-square&colorB=559c99"></img>
+                                    </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-card project-card-large">
+                        <a href="https://github.com/msindwan/serverpp">
+                            <div class="well serverpp">
+                                <h3 class="title">SERVER++</h3>
+                                <div class="project-description">
+                                    Server++ is a basic HTTP server for Windows and Linux written in C++.
+                                </div>
+                                <div class="tags">
+                                    <img alt="latest release for serverpp"
+                                        src="https://img.shields.io/github/release/msindwan/serverpp.svg?style=flat-square"></img>
+                                    <img alt="primary language for serverpp"
+                                        src="https://img.shields.io/github/languages/top/msindwan/serverpp.svg?style=flat-square&colorB=559c99"></img>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-card project-card-small">
+                        <a href="https://github.com/msindwan/jconf">
+                            <div class="well jconf">
+                                <h3>JCONF</h3>
+                                <div class="project-description">
+                                    JCONF is a JSON parser for C/C++ applications intended for JSON-based configuration
+                                    files.
+                                </div>
+
+                                <div class="tags">
+                                    <img alt="latest release for jconf"
+                                        src="https://img.shields.io/github/release/msindwan/jconf.svg?style=flat-square"></img>
+                                    <img alt="primary language for jconf"
+                                        src="https://img.shields.io/github/languages/top/msindwan/jconf.svg?style=flat-square&colorB=559c99"></img>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-nav">
+                <p>
+                    Created and Maintained by <a href="https://github.com/msindwan" target="_blank"
+                        rel="noopener noreferrer">Mayank (Max)
+                        Sindwani.</a>
+                </p>
+                <ul>
+                    <li>
+                        <a href="https://github.com/msindwan/msindwan.github.io#browser-support" target="_blank"
+                            rel="noopener noreferrer">
+                            Browser Support
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/msindwan/msindwan.github.io#legal" target="_blank"
+                            rel="noopener noreferrer">
+                            Legal
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <script type="text/javascript" src="static/js/modernizr.js"></script>
-        <script type="text/javascript" src="static/js/app.js"></script>
-    </body>
+    </footer>
+    <script type="text/javascript" src="static/js/app.js"></script>
+</body>
+
 </html>
