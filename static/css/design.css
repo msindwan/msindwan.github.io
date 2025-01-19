@@ -103,6 +103,44 @@ h1 {
     transition: all .6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+.tags {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.tags .tag {
+    display: flex;
+    background: #3d3d3d;
+    color: white;
+}
+
+.tags .tag .value,
+.tags .tag .label {
+    padding: 4px;
+}
+
+.tags .tag .value.l-c {
+    background: #555555;
+}
+
+.tags .tag .value.l-cplusplus {
+    background: #f34b7d;
+}
+
+.tags .tag .value.l-javascript {
+    background: #007ec6;
+}
+
+.tags .tag .value.l-java {
+    background: #b07219;
+}
+
+.tags .tag .value.l-kotlin {
+    background: #A97BFF;
+}
+
 .container {
     padding-right: 15px;
     padding-left: 15px;
@@ -280,7 +318,7 @@ header .profile-title .content-subtitle {
 
 .carousel-indicators li.active {
     margin: 0;
-    width:  12px;
+    width: 12px;
     height: 12px;
     background-color: white;
 }
@@ -503,6 +541,7 @@ header .profile-title .content-subtitle {
 }
 
 @media(max-width: 990px) {
+
     .profile-projects .project-card-large,
     .profile-projects .project-card-small {
         flex-basis: 100%;
