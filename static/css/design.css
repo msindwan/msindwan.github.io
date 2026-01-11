@@ -184,6 +184,7 @@ a:focus {
 
 .hero-title {
     margin-bottom: 1.5rem;
+
 }
 
 .title-line {
@@ -196,6 +197,8 @@ a:focus {
     background-clip: text;
     margin-bottom: 0.5rem;
     animation: fadeInUp 0.8s ease-out;
+    font-weight: 100;
+    text-transform: uppercase;
 }
 
 .title-subtitle {
