@@ -53,12 +53,7 @@ class PageNavigator {
     }
 
     showPage(pageId, pushState = true) {
-        // Hide all pages
-        this.pages.forEach(page => {
-            page.classList.remove('active');
-        });
-
-        // Show target page - try different ID formats
+        // Find target page - try different ID formats
         let targetPage = document.getElementById(`${pageId}-page`);
         if (!targetPage) {
             targetPage = document.getElementById(pageId);
@@ -68,26 +63,41 @@ class PageNavigator {
             targetPage = document.getElementById(pageId);
         }
 
-        if (targetPage) {
-            // Add active class with slight delay for transition
-            setTimeout(() => {
-                targetPage.classList.add('active');
-            }, 50);
-
-            this.currentPage = pageId;
-
-            // Update URL
-            if (pushState) {
-                const url = pageId === 'home' ? '#' : `#${pageId}`;
-                window.history.pushState({ page: pageId }, '', url);
-            }
-
-            // Update nav links
-            this.updateNavLinks(pageId);
-
-            // Scroll to top
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+        if (!targetPage) {
+            return;
         }
+
+        // If already on this page, do nothing
+        if (this.currentPage === pageId && targetPage.classList.contains('active')) {
+            return;
+        }
+
+        // Scroll to top immediately to prevent footer flicker
+        window.scrollTo({ top: 0, behavior: 'instant' });
+
+        // Hide all pages first
+        this.pages.forEach(page => {
+            page.classList.remove('active');
+        });
+
+        // Use requestAnimationFrame to ensure smooth transition
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                // Now show the target page
+                targetPage.classList.add('active');
+                
+                this.currentPage = pageId;
+
+                // Update URL
+                if (pushState) {
+                    const url = pageId === 'home' ? '#' : `#${pageId}`;
+                    window.history.pushState({ page: pageId }, '', url);
+                }
+
+                // Update nav links
+                this.updateNavLinks(pageId);
+            });
+        });
     }
 
     setupNavLinks() {

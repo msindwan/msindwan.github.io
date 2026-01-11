@@ -132,22 +132,28 @@ a:focus {
 /* Page Container */
 .page-container {
     position: relative;
-    min-height: 100vh;
+    min-height: calc(100vh - 70px);
     padding-top: 70px;
+    overflow: hidden;
 }
 
 .page {
     display: none;
     opacity: 0;
+    visibility: hidden;
     transform: translateY(20px);
-    transition: opacity var(--transition-slow), transform var(--transition-slow);
-    animation: fadeInUp 0.6s ease-out forwards;
+    transition: opacity var(--transition-slow), transform var(--transition-slow), visibility 0s var(--transition-slow);
+    pointer-events: none;
+    min-height: calc(100vh - 70px);
 }
 
 .page.active {
     display: block;
     opacity: 1;
+    visibility: visible;
     transform: translateY(0);
+    pointer-events: auto;
+    animation: fadeInUp 0.6s ease-out forwards;
 }
 
 @keyframes fadeInUp {
@@ -660,6 +666,8 @@ a:focus {
     border-top: 1px solid var(--border-color);
     padding: 3rem 0;
     margin-top: 4rem;
+    position: relative;
+    z-index: 1;
 }
 
 .footer-content {
