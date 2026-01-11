@@ -712,18 +712,18 @@ a:focus {
 }
 
 .footer-text {
-    color: var(--text-muted);
+    color: var(--text-secondary);
     font-size: 0.9rem;
     text-align: center;
 }
 
 .footer-text a {
-    color: var(--accent-color);
+    color: var(--accent-hover);
     transition: color var(--transition-fast);
 }
 
 .footer-text a:hover {
-    color: var(--accent-hover);
+    color: #a5b4fc;
 }
 
 /* Responsive Design */

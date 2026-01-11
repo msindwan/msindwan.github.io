@@ -326,9 +326,9 @@ function initializeCarousel() {
     }
 
     if (!isMobile()) {
-        // Show a 3D carousel if supported.
+        // Ensure 3D carousel class is present (should already be set on DOMContentLoaded)
         if (!carouselContainer.classList.contains("three-dimensional-carousel")) {
-            carouselContainer.className += " three-dimensional-carousel";
+            carouselContainer.classList.add("three-dimensional-carousel");
         }
         move3dCarousel();
     } else {
@@ -346,6 +346,14 @@ function initializeCarousel() {
         // Initialize page navigator
         const navigator = new PageNavigator();
 
+        // Pre-initialize 3D carousel class on desktop to prevent visible transition
+        if (!isMobile()) {
+            const carouselContainer = document.getElementById("technologies_carousel_container");
+            if (carouselContainer && !carouselContainer.classList.contains("three-dimensional-carousel")) {
+                carouselContainer.classList.add("three-dimensional-carousel");
+            }
+        }
+
         // Initialize carousel if about page is already active
         const aboutPage = document.getElementById("about-page");
         if (aboutPage && aboutPage.classList.contains("active")) {
@@ -358,6 +366,13 @@ function initializeCarousel() {
                 if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
                     const aboutPage = document.getElementById("about-page");
                     if (aboutPage && aboutPage.classList.contains("active")) {
+                        // Ensure 3D class is set immediately for desktop before carousel becomes visible
+                        if (!isMobile()) {
+                            const carouselContainer = document.getElementById("technologies_carousel_container");
+                            if (carouselContainer && !carouselContainer.classList.contains("three-dimensional-carousel")) {
+                                carouselContainer.classList.add("three-dimensional-carousel");
+                            }
+                        }
                         // Reset initialization flag when about page becomes active
                         carouselInitialized = false;
                         // Small delay to ensure page is fully visible
