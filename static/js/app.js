@@ -236,20 +236,37 @@ function move3dCarousel() {
 
 // Wires up the 2D carousel.
 function move2dCarousel() {
-    var panelHeight = document.querySelector('.carousel .panel-six').clientHeight,
-        indicators = document.querySelectorAll(".carousel-indicators li"),
-        carousel = document.getElementById("technologies_carousel"),
-        prevIndicator = indicators[0],
-        automaticSpin = null,
-        spinTimeout = null,
-        spinDelay = 2000,
-        curIndex = 0;
+    var carousel = document.getElementById("technologies_carousel");
+    if (!carousel) return;
+
+    var indicators = document.querySelectorAll(".carousel-indicators li");
+    if (!indicators || indicators.length === 0) return;
+
+    // Get panel height - try multiple methods for reliability
+    var getPanelHeight = function() {
+        var panel = document.querySelector('.carousel .panel-one');
+        if (panel && panel.clientHeight > 0) {
+            return panel.clientHeight;
+        }
+        // Fallback to CSS height if clientHeight is 0 (element not visible)
+        return 215; // Default height from CSS
+    };
+
+    var panelHeight = getPanelHeight();
+    var prevIndicator = indicators[0];
+    var automaticSpin = null;
+    var spinTimeout = null;
+    var spinDelay = 2000;
+    var curIndex = 0;
 
     // Moves the carousel to the newIndex or to the next item if an index is not provided.
     var moveCarousel = function (newIndex) {
         if (newIndex === curIndex) {
             return;
         }
+
+        // Recalculate panel height in case it changed (e.g., after page transition)
+        panelHeight = getPanelHeight();
 
         prevIndicator.className = "";
         if (newIndex === undefined) {
@@ -265,6 +282,10 @@ function move2dCarousel() {
     }
 
     prevIndicator.className = "active";
+    
+    // Initialize carousel position
+    carousel.style.marginTop = "0px";
+    carousel.style.transition = "margin 1s";
 
     // Map indicators to the carousel move function.
     for (var i = 0; i < indicators.length; i++) {
@@ -281,22 +302,76 @@ function move2dCarousel() {
     automaticSpin = setInterval(moveCarousel, spinDelay);
 }
 
+// Carousel initialization state
+var carouselInitialized = false;
+var carouselAutomaticSpin = null;
+
+// Initialize carousel when about page is shown
+function initializeCarousel() {
+    const carouselContainer = document.getElementById("technologies_carousel_container");
+    if (!carouselContainer) {
+        return;
+    }
+
+    // Clear any existing intervals
+    if (carouselAutomaticSpin) {
+        clearInterval(carouselAutomaticSpin);
+        carouselAutomaticSpin = null;
+    }
+
+    // Reset carousel state
+    const carousel = document.getElementById("technologies_carousel");
+    if (carousel) {
+        carousel.style.marginTop = "0px";
+    }
+
+    if (!isMobile()) {
+        // Show a 3D carousel if supported.
+        if (!carouselContainer.classList.contains("three-dimensional-carousel")) {
+            carouselContainer.className += " three-dimensional-carousel";
+        }
+        move3dCarousel();
+    } else {
+        // For mobile, wait a bit for the page to be fully visible before initializing
+        setTimeout(function() {
+            move2dCarousel();
+        }, 150);
+    }
+    carouselInitialized = true;
+}
+
 // Entry point.
 (function () {
     document.addEventListener("DOMContentLoaded", function () {
         // Initialize page navigator
         const navigator = new PageNavigator();
 
-        // Enable the carousel if it exists (on about page)
-        const carouselContainer = document.getElementById("technologies_carousel_container");
-        if (carouselContainer) {
-            if (!isMobile()) {
-                // Show a 3D carousel if supported.
-                carouselContainer.className += " three-dimensional-carousel";
-                move3dCarousel();
-            } else {
-                move2dCarousel();
-            }
+        // Initialize carousel if about page is already active
+        const aboutPage = document.getElementById("about-page");
+        if (aboutPage && aboutPage.classList.contains("active")) {
+            initializeCarousel();
+        }
+
+        // Monitor page changes to initialize carousel when about page becomes active
+        const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                    const aboutPage = document.getElementById("about-page");
+                    if (aboutPage && aboutPage.classList.contains("active")) {
+                        // Reset initialization flag when about page becomes active
+                        carouselInitialized = false;
+                        // Small delay to ensure page is fully visible
+                        setTimeout(function() {
+                            initializeCarousel();
+                        }, 200);
+                    }
+                }
+            });
+        });
+
+        // Observe the about page for class changes
+        if (aboutPage) {
+            observer.observe(aboutPage, { attributes: true, attributeFilter: ['class'] });
         }
 
         // Add smooth scroll behavior for anchor links
